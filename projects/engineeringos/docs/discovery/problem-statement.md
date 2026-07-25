@@ -4,7 +4,7 @@
 **Fase:** Discovery inicial
 **Día de trabajo:** W01D01
 **Issue relacionada:** [#1](https://github.com/JuanCarlosBP/portfolio/issues/1)
-**Estado:** Borrador inicial
+**Estado:** Validado en W01D01
 
 ## Resumen
 
