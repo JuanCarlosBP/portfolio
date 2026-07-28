@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T12:00:00.000Z",
+  "generatedAt": "2026-07-28T23:58:58.025Z",
   "generatorVersion": "3.2.2",
   "owner": {
     "login": "JuanCarlosBP",
@@ -26,17 +26,17 @@
       ],
       "featured": true,
       "latestCommit": {
-        "sha": "c29b66472f7564c1796d132ff09ab0af05536488",
-        "shortSha": "c29b664",
-        "message": "docs(portfolio): add repository landing page (#4)",
-        "date": "2026-07-25T22:10:55.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/commit/c29b66472f7564c1796d132ff09ab0af05536488"
+        "sha": "9bbc9cb39bafc1530d404561dbcb32054880cbfc",
+        "shortSha": "9bbc9cb",
+        "message": "feat(jcbp): install verified evidence feed automation (#5)",
+        "date": "2026-07-28T23:58:41.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/9bbc9cb39bafc1530d404561dbcb32054880cbfc"
       },
       "latestMergedPullRequest": {
-        "number": 4,
-        "title": "docs(portfolio): add repository landing page",
-        "mergedAt": "2026-07-25T22:10:55.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/pull/4"
+        "number": 5,
+        "title": "feat(jcbp): install verified evidence feed automation",
+        "mergedAt": "2026-07-28T23:58:41.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/5"
       },
       "latestRelease": null,
       "ci": {
@@ -48,18 +48,18 @@
         "runId": 30136387462,
         "status": "unavailable",
         "conclusion": "success",
-        "startedAt": "2026-07-25T00:28:40.000Z",
-        "completedAt": "2026-07-25T00:29:35.000Z",
+        "startedAt": "2026-07-25T00:29:13.000Z",
+        "completedAt": "2026-07-25T00:29:29.000Z",
         "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30136387462"
       },
       "evidence": {
         "repository": "https://github.com/JuanCarlosBP/portfolio",
         "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
         "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
-        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/4",
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/5",
         "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30136387462"
       },
-      "updatedAt": "2026-07-25T22:10:55.000Z"
+      "updatedAt": "2026-07-28T23:58:41.000Z"
     }
   ],
   "apps": [],
@@ -71,29 +71,29 @@
       "status": "active",
       "archived": false,
       "approvalSource": "registry",
-      "updatedAt": "2026-07-25T22:10:55.000Z"
+      "updatedAt": "2026-07-25T22:10:59.000Z"
     }
   ],
   "activity": [
     {
       "type": "commit",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "docs(portfolio): add repository landing page (#4)",
-      "occurredAt": "2026-07-25T22:10:55.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/commit/c29b66472f7564c1796d132ff09ab0af05536488"
+      "title": "feat(jcbp): install verified evidence feed automation (#5)",
+      "occurredAt": "2026-07-28T23:58:41.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/9bbc9cb39bafc1530d404561dbcb32054880cbfc"
     },
     {
       "type": "pull_request",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "docs(portfolio): add repository landing page",
-      "occurredAt": "2026-07-25T22:10:55.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/pull/4"
+      "title": "feat(jcbp): install verified evidence feed automation",
+      "occurredAt": "2026-07-28T23:58:41.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/5"
     },
     {
       "type": "ci",
       "repository": "JuanCarlosBP/portfolio",
       "title": "EngineeringOS discovery quality: unavailable",
-      "occurredAt": "2026-07-25T00:29:35.000Z",
+      "occurredAt": "2026-07-25T00:29:29.000Z",
       "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30136387462"
     }
   ],
