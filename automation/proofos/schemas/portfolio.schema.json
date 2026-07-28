@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jcbpsoftware.com/schemas/proofos-portfolio-v1.json",
+  "title": "ProofOS portfolio manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "owner", "project"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "pattern": "^[A-Za-z0-9_.-]+$"
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "summary",
+        "status",
+        "category",
+        "skills",
+        "workflowName",
+        "workflowPath"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "status": {
+          "enum": ["demonstrated", "in-development", "planned", "archived"]
+        },
+        "category": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "skills": {
+          "type": "array",
+          "maxItems": 24,
+          "items": { "type": "string", "minLength": 1, "maxLength": 60 }
+        },
+        "defaultBranch": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "featured": { "type": "boolean" },
+        "workflowName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "workflowPath": {
+          "type": "string",
+          "pattern": "^\\.github/workflows/[A-Za-z0-9_.-]+\\.ya?ml$"
+        },
+        "workflowBranch": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "issue": { "type": "integer", "minimum": 1 },
+            "pullRequest": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    }
+  }
+}

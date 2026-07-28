@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T12:00:00.000Z",
+  "generatorVersion": "3.2.2",
+  "owner": {
+    "login": "JuanCarlosBP",
+    "profileUrl": "https://github.com/JuanCarlosBP"
+  },
+  "projects": [
+    {
+      "id": "engineeringos",
+      "name": "EngineeringOS",
+      "repository": "JuanCarlosBP/portfolio",
+      "repositoryUrl": "https://github.com/JuanCarlosBP/portfolio",
+      "defaultBranch": "main",
+      "status": "demonstrated",
+      "category": "engineering system",
+      "summary": "Sistema operativo personal de ingeniería para convertir trabajo en incrementos trazables, verificables y revisables.",
+      "skills": [
+        "GitHub Actions",
+        "Python",
+        "unittest",
+        "ADR",
+        "quality gates",
+        "trazabilidad"
+      ],
+      "featured": true,
+      "latestCommit": {
+        "sha": "c29b66472f7564c1796d132ff09ab0af05536488",
+        "shortSha": "c29b664",
+        "message": "docs(portfolio): add repository landing page (#4)",
+        "date": "2026-07-25T22:10:55.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/c29b66472f7564c1796d132ff09ab0af05536488"
+      },
+      "latestMergedPullRequest": {
+        "number": 4,
+        "title": "docs(portfolio): add repository landing page",
+        "mergedAt": "2026-07-25T22:10:55.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/4"
+      },
+      "latestRelease": null,
+      "ci": {
+        "workflowName": "EngineeringOS discovery quality",
+        "workflowPath": ".github/workflows/engineeringos-discovery.yml",
+        "branch": "main",
+        "headSha": "b25bce5b44d4f276af3ad0bc21728243c9f03a7a",
+        "matchesLatestCommit": false,
+        "runId": 30136387462,
+        "status": "unavailable",
+        "conclusion": "success",
+        "startedAt": "2026-07-25T00:28:40.000Z",
+        "completedAt": "2026-07-25T00:29:35.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30136387462"
+      },
+      "evidence": {
+        "repository": "https://github.com/JuanCarlosBP/portfolio",
+        "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
+        "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/4",
+        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30136387462"
+      },
+      "updatedAt": "2026-07-25T22:10:55.000Z"
+    }
+  ],
+  "apps": [],
+  "repositories": [
+    {
+      "repository": "JuanCarlosBP/portfolio",
+      "repositoryUrl": "https://github.com/JuanCarlosBP/portfolio",
+      "defaultBranch": "main",
+      "status": "active",
+      "archived": false,
+      "approvalSource": "registry",
+      "updatedAt": "2026-07-25T22:10:55.000Z"
+    }
+  ],
+  "activity": [
+    {
+      "type": "commit",
+      "repository": "JuanCarlosBP/portfolio",
+      "title": "docs(portfolio): add repository landing page (#4)",
+      "occurredAt": "2026-07-25T22:10:55.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/c29b66472f7564c1796d132ff09ab0af05536488"
+    },
+    {
+      "type": "pull_request",
+      "repository": "JuanCarlosBP/portfolio",
+      "title": "docs(portfolio): add repository landing page",
+      "occurredAt": "2026-07-25T22:10:55.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/4"
+    },
+    {
+      "type": "ci",
+      "repository": "JuanCarlosBP/portfolio",
+      "title": "EngineeringOS discovery quality: unavailable",
+      "occurredAt": "2026-07-25T00:29:35.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30136387462"
+    }
+  ],
+  "degraded": false,
+  "errors": []
+}
