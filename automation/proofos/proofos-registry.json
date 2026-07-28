@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "owner": "JuanCarlosBP",
+  "approvedTopics": [
+    "proofos-approved"
+  ],
+  "apps": [],
+  "repositories": [
+    {
+      "repository": "JuanCarlosBP/portfolio",
+      "id": "engineeringos",
+      "name": "EngineeringOS",
+      "summary": "Sistema operativo personal de ingeniería para convertir trabajo en incrementos trazables, verificables y revisables.",
+      "status": "demonstrated",
+      "category": "engineering system",
+      "skills": [
+        "GitHub Actions",
+        "Python",
+        "unittest",
+        "ADR",
+        "quality gates",
+        "trazabilidad"
+      ],
+      "featured": true,
+      "defaultBranch": "main",
+      "workflowName": "EngineeringOS discovery quality",
+      "workflowPath": ".github/workflows/engineeringos-discovery.yml",
+      "workflowBranch": "main",
+      "commitScanLimit": 20,
+      "evidence": {
+        "issue": 1,
+        "pullRequest": 2
+      }
+    }
+  ]
+}

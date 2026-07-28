@@ -1,0 +1,763 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://jcbpsoftware.com/schemas/proofos-feed-v1.json",
+  "title": "ProofOS aggregated evidence feed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "generatorVersion",
+    "owner",
+    "projects",
+    "repositories",
+    "activity",
+    "degraded",
+    "errors"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "generatorVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "owner": {
+      "$ref": "#/$defs/owner"
+    },
+    "projects": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/project"
+      }
+    },
+    "apps": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "$ref": "#/$defs/app"
+      }
+    },
+    "repositories": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/repository"
+      }
+    },
+    "activity": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "$ref": "#/$defs/activity"
+      }
+    },
+    "degraded": {
+      "type": "boolean"
+    },
+    "errors": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      }
+    }
+  },
+  "$defs": {
+    "owner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "login",
+        "profileUrl"
+      ],
+      "properties": {
+        "login": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9-]+$",
+          "maxLength": 80
+        },
+        "profileUrl": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "repository",
+        "repositoryUrl",
+        "defaultBranch",
+        "status",
+        "category",
+        "summary",
+        "skills",
+        "featured",
+        "latestCommit",
+        "latestMergedPullRequest",
+        "latestRelease",
+        "ci",
+        "evidence",
+        "updatedAt"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,79}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "repository": {
+          "$ref": "#/$defs/repositoryName"
+        },
+        "repositoryUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "defaultBranch": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "status": {
+          "enum": [
+            "demonstrated",
+            "in-development",
+            "planned",
+            "archived"
+          ]
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "skills": {
+          "type": "array",
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          }
+        },
+        "featured": {
+          "type": "boolean"
+        },
+        "latestCommit": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/commit"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "latestMergedPullRequest": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/pullRequest"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "latestRelease": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/release"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ci": {
+          "$ref": "#/$defs/ci"
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "repositoryUrl",
+        "defaultBranch",
+        "status",
+        "archived",
+        "approvalSource",
+        "updatedAt"
+      ],
+      "properties": {
+        "repository": {
+          "$ref": "#/$defs/repositoryName"
+        },
+        "repositoryUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "defaultBranch": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "status": {
+          "enum": [
+            "active",
+            "archived"
+          ]
+        },
+        "archived": {
+          "type": "boolean"
+        },
+        "approvalSource": {
+          "enum": [
+            "registry",
+            "manifest",
+            "topic"
+          ]
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "activity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "repository",
+        "title",
+        "occurredAt",
+        "url"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "commit",
+            "pull_request",
+            "release",
+            "ci"
+          ]
+        },
+        "repository": {
+          "$ref": "#/$defs/repositoryName"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "occurredAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "commit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sha",
+        "shortSha",
+        "message",
+        "date",
+        "url"
+      ],
+      "properties": {
+        "sha": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{40}$"
+        },
+        "shortSha": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{7}$"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "pullRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "number",
+        "title",
+        "mergedAt",
+        "url"
+      ],
+      "properties": {
+        "number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "mergedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tag",
+        "name",
+        "publishedAt",
+        "url"
+      ],
+      "properties": {
+        "tag": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "ci": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "workflowName",
+        "workflowPath",
+        "branch",
+        "headSha",
+        "matchesLatestCommit",
+        "runId",
+        "status",
+        "conclusion",
+        "startedAt",
+        "completedAt",
+        "url"
+      ],
+      "properties": {
+        "workflowName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "workflowPath": {
+          "type": "string",
+          "pattern": "^\\.github/workflows/.+\\.ya?ml$",
+          "maxLength": 220
+        },
+        "branch": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "headSha": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{40}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "matchesLatestCommit": {
+          "type": "boolean"
+        },
+        "runId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "success",
+            "failure",
+            "cancelled",
+            "running",
+            "unavailable"
+          ]
+        },
+        "conclusion": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 60
+        },
+        "startedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "completedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "matchesLatestCommit": {
+                "const": true
+              }
+            },
+            "required": [
+              "matchesLatestCommit"
+            ]
+          },
+          "then": {
+            "properties": {
+              "headSha": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{40}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "success"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "runId": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "headSha": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{40}$"
+              },
+              "matchesLatestCommit": {
+                "const": true
+              },
+              "conclusion": {
+                "const": "success"
+              },
+              "completedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "running"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "runId": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "headSha": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{40}$"
+              },
+              "matchesLatestCommit": {
+                "const": true
+              },
+              "startedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "completedAt": {
+                "type": "null"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "app": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "platform",
+        "status",
+        "summary",
+        "updatedAt",
+        "verified"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,79}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "platform": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "status": {
+          "enum": [
+            "concept",
+            "in-development",
+            "testing",
+            "review",
+            "published",
+            "paused",
+            "archived"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "iconUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "screenshots": {
+          "type": "array",
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "technologies": {
+          "type": "array",
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          }
+        },
+        "repositoryUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "storeUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "privacyPolicyUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 80
+        },
+        "releaseDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence": {
+          "type": "array",
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "verified": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "published"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "storeUrl"
+            ],
+            "properties": {
+              "storeUrl": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "repositoryName": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$",
+      "maxLength": 180
+    }
+  }
+}

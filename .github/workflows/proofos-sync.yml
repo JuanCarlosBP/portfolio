@@ -1,0 +1,77 @@
+name: JCBP Software feed synchronization
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - ".proofos/feed.json"
+  workflow_run:
+    workflows:
+      - "EngineeringOS discovery quality"
+    types:
+      - completed
+  repository_dispatch:
+    types:
+      - proofos_repository_updated
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+  pull-requests: read
+
+concurrency:
+  group: proofos-feed-${{ github.ref || github.event.workflow_run.head_branch || 'main' }}
+  cancel-in-progress: true
+
+jobs:
+  aggregate:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the current main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate the aggregate feed
+        env:
+          PROOFOS_GITHUB_TOKEN: ${{ secrets.PROOFOS_READ_TOKEN || github.token }}
+          PROOFOS_EVENT_REPOSITORY: ${{ github.event.client_payload.repository }}
+          PROOFOS_EVENT_WORKFLOW_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          PROOFOS_CONFIG: automation/proofos/proofos-registry.json
+          PROOFOS_SCHEMA: .proofos/feed.schema.json
+          PROOFOS_OUTPUT: .proofos/feed.json
+        run: node automation/proofos/generate-feed.mjs
+
+      - name: Validate the feed against its schema and registry
+        run: >-
+          node automation/proofos/validate-feed.mjs
+          .proofos/feed.json
+          .proofos/feed.schema.json
+          automation/proofos/proofos-registry.json
+
+      - name: Commit only an effective feed change
+        shell: bash
+        run: |
+          if git diff --quiet -- .proofos/feed.json; then
+            echo "The effective feed content has not changed."
+            exit 0
+          fi
+          git add .proofos/feed.json
+          git config user.name "proofos-feed[bot]"
+          git config user.email "proofos-feed[bot]@users.noreply.github.com"
+          git commit -m "chore(proofos): update verified evidence feed [skip ci]"
+          git push origin HEAD:main
