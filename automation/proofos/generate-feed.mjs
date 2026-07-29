@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 
 import { assertFeedValid, loadJson } from "./validate-feed.mjs";
 
-export const GENERATOR_VERSION = "3.2.2";
+export const GENERATOR_VERSION = "3.2.4";
 export const CI_STATES = new Set([
   "success",
   "failure",
@@ -613,7 +613,7 @@ export async function collectProject(
       status: repo.archived ? "archived" : "active",
       archived: Boolean(repo.archived),
       approvalSource: config.approvalSource,
-      updatedAt: isoDate(repo.updated_at) || updatedAt,
+      updatedAt,
     },
   };
 }
