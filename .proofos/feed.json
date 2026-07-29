@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T00:01:45.328Z",
-  "generatorVersion": "3.2.2",
+  "generatedAt": "2026-07-29T01:32:54.923Z",
+  "generatorVersion": "3.2.4",
   "owner": {
     "login": "JuanCarlosBP",
     "profileUrl": "https://github.com/JuanCarlosBP"
@@ -26,17 +26,17 @@
       ],
       "featured": true,
       "latestCommit": {
-        "sha": "9bbc9cb39bafc1530d404561dbcb32054880cbfc",
-        "shortSha": "9bbc9cb",
-        "message": "feat(jcbp): install verified evidence feed automation (#5)",
-        "date": "2026-07-28T23:58:41.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/commit/9bbc9cb39bafc1530d404561dbcb32054880cbfc"
+        "sha": "040a998dbf141d4fc9288733357718db2a392357",
+        "shortSha": "040a998",
+        "message": "fix(jcbp): prevent repeated feed bot commits (#6)",
+        "date": "2026-07-29T01:24:59.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/040a998dbf141d4fc9288733357718db2a392357"
       },
       "latestMergedPullRequest": {
-        "number": 5,
-        "title": "feat(jcbp): install verified evidence feed automation",
-        "mergedAt": "2026-07-28T23:58:41.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/pull/5"
+        "number": 6,
+        "title": "fix(jcbp): prevent repeated feed bot commits",
+        "mergedAt": "2026-07-29T01:25:00.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/6"
       },
       "latestRelease": null,
       "ci": {
@@ -56,10 +56,10 @@
         "repository": "https://github.com/JuanCarlosBP/portfolio",
         "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
         "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
-        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/5",
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/6",
         "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30136387462"
       },
-      "updatedAt": "2026-07-28T23:58:41.000Z"
+      "updatedAt": "2026-07-29T01:24:59.000Z"
     }
   ],
   "apps": [],
@@ -71,23 +71,23 @@
       "status": "active",
       "archived": false,
       "approvalSource": "registry",
-      "updatedAt": "2026-07-28T23:59:20.000Z"
+      "updatedAt": "2026-07-29T01:24:59.000Z"
     }
   ],
   "activity": [
     {
-      "type": "commit",
-      "repository": "JuanCarlosBP/portfolio",
-      "title": "feat(jcbp): install verified evidence feed automation (#5)",
-      "occurredAt": "2026-07-28T23:58:41.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/commit/9bbc9cb39bafc1530d404561dbcb32054880cbfc"
-    },
-    {
       "type": "pull_request",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "feat(jcbp): install verified evidence feed automation",
-      "occurredAt": "2026-07-28T23:58:41.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/pull/5"
+      "title": "fix(jcbp): prevent repeated feed bot commits",
+      "occurredAt": "2026-07-29T01:25:00.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/6"
+    },
+    {
+      "type": "commit",
+      "repository": "JuanCarlosBP/portfolio",
+      "title": "fix(jcbp): prevent repeated feed bot commits (#6)",
+      "occurredAt": "2026-07-29T01:24:59.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/040a998dbf141d4fc9288733357718db2a392357"
     },
     {
       "type": "ci",
