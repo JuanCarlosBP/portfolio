@@ -46,6 +46,9 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Run feed stability regression tests
+        run: node --test automation/proofos/generate-feed.test.mjs
+
       - name: Generate the aggregate feed
         env:
           PROOFOS_GITHUB_TOKEN: ${{ secrets.PROOFOS_READ_TOKEN || github.token }}
