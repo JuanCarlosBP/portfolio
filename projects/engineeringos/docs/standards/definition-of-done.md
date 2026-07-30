@@ -104,6 +104,7 @@ Una tarea `En curso`, `En validación` o `Bloqueada` no está terminada.
 - [ ] Describe el estado real.
 - [ ] Las capacidades futuras aparecen como pendientes.
 - [ ] README, ADR, changelog y evidencias son coherentes.
+- [ ] Todos los archivos `README.md` afectados fueron revisados y actualizados.
 - [ ] Los enlaces, rutas y comandos son válidos.
 - [ ] Las métricas distinguen objetivos y resultados.
 - [ ] Los riesgos, límites y siguiente acción están registrados.
