@@ -6,7 +6,7 @@
 **Fecha de ejecución:** 2026-07-30
 **Issue relacionada:** [#8](https://github.com/JuanCarlosBP/portfolio/issues/8)
 **Rama:** `docs/p01-w01d02-backlog-dod`
-**Estado:** Definida en el incremento AM de W01D02
+**Estado:** Validada en W01D02
 
 ## Propósito
 

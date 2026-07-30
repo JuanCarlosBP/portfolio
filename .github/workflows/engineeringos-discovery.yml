@@ -41,3 +41,6 @@ jobs:
 
       - name: Validate discovery contract
         run: python projects/engineeringos/tools/validate_discovery.py
+
+      - name: Validate planning contract
+        run: python projects/engineeringos/tools/validate_planning.py

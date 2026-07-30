@@ -5,32 +5,63 @@ en incrementos trazables, verificables y revisables.
 
 ## Estado
 
-W01D01 · Discovery inicial validado.
+W01D02 · Contrato de planificación y terminado validado.
 
-La primera entrega conecta problema, usuarios, proceso actual, métricas, issue,
-rama, commits, pruebas, evidencia y CI. No implementa todavía la CLI completa ni
-el resto del flujo de EngineeringOS.
+EngineeringOS dispone actualmente de:
 
-## Trazabilidad de W01D01
+- discovery inicial;
+- backlog priorizado;
+- política de prioridad;
+- flujo de estados;
+- límite WIP;
+- Definition of Done reutilizable;
+- validadores ejecutables;
+- pruebas automáticas;
+- CI mediante GitHub Actions.
 
-- Issue: [#1 · Discovery inicial de EngineeringOS](https://github.com/JuanCarlosBP/portfolio/issues/1)
-- Rama: `docs/p01-w01d01-engineeringos-discovery`
-- Incremento AM: documentación inicial del discovery.
-- Incremento PM: quality gate ejecutable, pruebas, métrica, ADR, evidencia y CI.
+La CLI general, la plantilla reutilizable de evidencia y el proceso completo de
+release permanecen fuera del alcance actual.
 
-## Qué se valida
+## Trazabilidad de W01D02
 
-El quality gate comprueba un contrato mínimo de 40 condiciones:
+- Issue: [#8 · Backlog y Definition of Done](https://github.com/JuanCarlosBP/portfolio/issues/8)
+- Rama: `docs/p01-w01d02-backlog-dod`
+- Incremento AM: `docs(w0012am): discovery engineeringos`
+- Incremento PM: `test(w0012pm): discovery engineeringos`
+- Backlog: [`docs/planning/backlog.md`](docs/planning/backlog.md)
+- Definition of Done:
+  [`docs/standards/definition-of-done.md`](docs/standards/definition-of-done.md)
+- Decisión:
+  [`ADR-0002`](docs/adr/ADR-0002-executable-planning-contract.md)
+- Evidencia:
+  [`w01d02-validation.md`](docs/evidence/w01d02-validation.md)
 
-- Cuatro documentos obligatorios.
-- Cinco metadatos comunes por documento.
-- Cinco secciones específicas por documento.
-- Estado explícito `Validado en W01D01`.
-- Enlace uniforme a la issue de origen.
+## Contratos ejecutables
 
-Este control no intenta decidir si toda la investigación es correcta. Su función
-es impedir que el incremento se cierre con documentos ausentes, sin trazabilidad,
-en borrador o sin las secciones mínimas acordadas.
+### Discovery
+
+El gate de W01D01 ejecuta 40 comprobaciones sobre cuatro documentos:
+
+- metadatos comunes;
+- secciones obligatorias;
+- estado validado;
+- enlace uniforme con la issue #1.
+
+### Planificación y terminado
+
+El gate de W01D02 ejecuta 39 comprobaciones sobre:
+
+- backlog y Definition of Done existentes;
+- trazabilidad con la issue #8;
+- diez elementos EOS ordenados;
+- prioridades permitidas;
+- estados permitidos;
+- límite WIP;
+- seis criterios obligatorios de terminado;
+- secciones operativas de cierre y evidencia.
+
+Los gates verifican estructura y reglas deterministas. No sustituyen la revisión
+humana de la calidad semántica, la prioridad empresarial o la utilidad real.
 
 ## Ejecución local
 
@@ -43,18 +74,12 @@ python -m unittest discover \
   -v
 
 python projects/engineeringos/tools/validate_discovery.py
+
+python projects/engineeringos/tools/validate_planning.py
 ```
 
-Resultado esperado:
-
-```text
-EngineeringOS discovery quality gate
-Checks: 40/40 passed
-Result: PASS
-```
-
-No se requieren dependencias externas: las pruebas y el validador utilizan
-exclusivamente la biblioteca estándar de Python.
+No se requieren dependencias externas. El código utiliza la biblioteca estándar
+de Python.
 
 ## Estructura actual
 
@@ -64,35 +89,44 @@ projects/engineeringos/
 ├── README.md
 ├── docs/
 │   ├── adr/
-│   │   └── ADR-0001-executable-discovery-gate.md
+│   │   ├── ADR-0001-executable-discovery-gate.md
+│   │   └── ADR-0002-executable-planning-contract.md
 │   ├── discovery/
 │   │   ├── current-process.md
 │   │   ├── problem-statement.md
 │   │   ├── success-metrics.md
 │   │   └── users-and-needs.md
-│   └── evidence/
-│       └── w01d01-validation.md
+│   ├── evidence/
+│   │   ├── w01d01-validation.md
+│   │   └── w01d02-validation.md
+│   ├── planning/
+│   │   └── backlog.md
+│   └── standards/
+│       └── definition-of-done.md
 ├── tests/
-│   └── test_validate_discovery.py
+│   ├── test_validate_discovery.py
+│   └── test_validate_planning.py
 └── tools/
-    └── validate_discovery.py
+    ├── validate_discovery.py
+    └── validate_planning.py
 ```
 
-## Decisión principal
+## Decisiones principales
 
-Se eligió una validación pequeña, local y ejecutable antes que añadir más
-documentación manual o contratar una herramienta externa. La decisión y sus
-límites están registrados en
-[`ADR-0001`](docs/adr/ADR-0001-executable-discovery-gate.md).
+- [`ADR-0001`](docs/adr/ADR-0001-executable-discovery-gate.md):
+  validación ejecutable del discovery.
+- [`ADR-0002`](docs/adr/ADR-0002-executable-planning-contract.md):
+  validación ejecutable del backlog, WIP y Definition of Done.
 
-## Límite actual
+## Limitaciones actuales
 
-La validación es estructural: confirma presencia, trazabilidad y estado, pero no
-evalúa automáticamente la calidad semántica de las conclusiones. La revisión
-humana sigue siendo necesaria.
+- La calidad semántica requiere revisión humana.
+- El backlog se mantiene manualmente.
+- El validador depende de un contrato textual estable.
+- La CI no demuestra por sí sola que el resultado aporte valor empresarial.
+- La CLI general de EngineeringOS todavía no está implementada.
 
 ## Siguiente acción
 
-W01D02: transformar los hallazgos del discovery en backlog priorizado y una
-Definition of Done reutilizable, manteniendo el mismo vínculo entre issue,
-incremento, validación y evidencia.
+EOS-004: crear una plantilla reutilizable de evidencia que reduzca duplicación y
+conserve comandos, resultados, métricas, riesgos, límites y siguiente acción.
