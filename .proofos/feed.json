@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T21:12:28.145Z",
+  "generatedAt": "2026-07-30T22:13:47.534Z",
   "generatorVersion": "3.2.4",
   "owner": {
     "login": "JuanCarlosBP",
@@ -26,40 +26,40 @@
       ],
       "featured": true,
       "latestCommit": {
-        "sha": "ace6f55889875742133729aa5d295a2fa5958f0e",
-        "shortSha": "ace6f55",
-        "message": "test(engineeringos): verify feed synchronization end to end (#7)",
-        "date": "2026-07-29T21:12:12.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/commit/ace6f55889875742133729aa5d295a2fa5958f0e"
+        "sha": "1e3ccdc41442401a0eaf5168ab1cc35fb2b91200",
+        "shortSha": "1e3ccdc",
+        "message": "Merge pull request #9 from JuanCarlosBP/docs/p01-w01d02-backlog-dod",
+        "date": "2026-07-30T22:13:31.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/1e3ccdc41442401a0eaf5168ab1cc35fb2b91200"
       },
       "latestMergedPullRequest": {
-        "number": 7,
-        "title": "test(engineeringos): verify feed synchronization end to end",
-        "mergedAt": "2026-07-29T21:12:13.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/pull/7"
+        "number": 9,
+        "title": "test(w0012pm): discovery engineeringos",
+        "mergedAt": "2026-07-30T22:13:31.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/9"
       },
       "latestRelease": null,
       "ci": {
         "workflowName": "EngineeringOS discovery quality",
         "workflowPath": ".github/workflows/engineeringos-discovery.yml",
         "branch": "main",
-        "headSha": "ace6f55889875742133729aa5d295a2fa5958f0e",
+        "headSha": "1e3ccdc41442401a0eaf5168ab1cc35fb2b91200",
         "matchesLatestCommit": true,
-        "runId": 30491449252,
-        "status": "success",
-        "conclusion": "success",
-        "startedAt": "2026-07-29T21:12:16.000Z",
-        "completedAt": "2026-07-29T21:12:28.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30491449252"
+        "runId": 30586377704,
+        "status": "running",
+        "conclusion": null,
+        "startedAt": "2026-07-30T22:13:33.000Z",
+        "completedAt": null,
+        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30586377704"
       },
       "evidence": {
         "repository": "https://github.com/JuanCarlosBP/portfolio",
         "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
         "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
-        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/7",
-        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30491449252"
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/9",
+        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30586377704"
       },
-      "updatedAt": "2026-07-29T21:12:12.000Z"
+      "updatedAt": "2026-07-30T22:13:31.000Z"
     }
   ],
   "apps": [],
@@ -71,30 +71,30 @@
       "status": "active",
       "archived": false,
       "approvalSource": "registry",
-      "updatedAt": "2026-07-29T21:12:12.000Z"
+      "updatedAt": "2026-07-30T22:13:31.000Z"
     }
   ],
   "activity": [
     {
       "type": "ci",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "EngineeringOS discovery quality: success",
-      "occurredAt": "2026-07-29T21:12:28.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30491449252"
-    },
-    {
-      "type": "pull_request",
-      "repository": "JuanCarlosBP/portfolio",
-      "title": "test(engineeringos): verify feed synchronization end to end",
-      "occurredAt": "2026-07-29T21:12:13.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/pull/7"
+      "title": "EngineeringOS discovery quality: running",
+      "occurredAt": "2026-07-30T22:13:33.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30586377704"
     },
     {
       "type": "commit",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "test(engineeringos): verify feed synchronization end to end (#7)",
-      "occurredAt": "2026-07-29T21:12:12.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/commit/ace6f55889875742133729aa5d295a2fa5958f0e"
+      "title": "Merge pull request #9 from JuanCarlosBP/docs/p01-w01d02-backlog-dod",
+      "occurredAt": "2026-07-30T22:13:31.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/1e3ccdc41442401a0eaf5168ab1cc35fb2b91200"
+    },
+    {
+      "type": "pull_request",
+      "repository": "JuanCarlosBP/portfolio",
+      "title": "test(w0012pm): discovery engineeringos",
+      "occurredAt": "2026-07-30T22:13:31.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/9"
     }
   ],
   "degraded": false,
