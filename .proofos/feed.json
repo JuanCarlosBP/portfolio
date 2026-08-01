@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-30T22:34:08.193Z",
+  "generatedAt": "2026-08-01T12:53:28.416Z",
   "generatorVersion": "3.2.4",
   "owner": {
     "login": "JuanCarlosBP",
@@ -26,40 +26,40 @@
       ],
       "featured": true,
       "latestCommit": {
-        "sha": "0f2b969c03dc7feb4467c9a52f77a4d255f9fcc6",
-        "shortSha": "0f2b969",
-        "message": "docs(portfolio): align readmes after w01d02 (#11)",
-        "date": "2026-07-30T22:33:57.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/commit/0f2b969c03dc7feb4467c9a52f77a4d255f9fcc6"
+        "sha": "3c6ae1b3001e1ebd08e28e77c64ada9789160e39",
+        "shortSha": "3c6ae1b",
+        "message": "Merge pull request #13 from JuanCarlosBP/docs/p01-w01d03-evidence-template",
+        "date": "2026-08-01T12:53:20.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/3c6ae1b3001e1ebd08e28e77c64ada9789160e39"
       },
       "latestMergedPullRequest": {
-        "number": 11,
-        "title": "docs(portfolio): align readmes after w01d02",
-        "mergedAt": "2026-07-30T22:33:58.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/pull/11"
+        "number": 13,
+        "title": "test(w0013pm): discovery engineeringos",
+        "mergedAt": "2026-08-01T12:53:20.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/13"
       },
       "latestRelease": null,
       "ci": {
         "workflowName": "EngineeringOS discovery quality",
         "workflowPath": ".github/workflows/engineeringos-discovery.yml",
         "branch": "main",
-        "headSha": "0f2b969c03dc7feb4467c9a52f77a4d255f9fcc6",
+        "headSha": "3c6ae1b3001e1ebd08e28e77c64ada9789160e39",
         "matchesLatestCommit": true,
-        "runId": 30587591007,
-        "status": "success",
-        "conclusion": "success",
-        "startedAt": "2026-07-30T22:34:00.000Z",
-        "completedAt": "2026-07-30T22:34:09.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30587591007"
+        "runId": 30700604703,
+        "status": "running",
+        "conclusion": null,
+        "startedAt": "2026-08-01T12:53:22.000Z",
+        "completedAt": null,
+        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30700604703"
       },
       "evidence": {
         "repository": "https://github.com/JuanCarlosBP/portfolio",
         "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
         "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
-        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/11",
-        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30587591007"
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/13",
+        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30700604703"
       },
-      "updatedAt": "2026-07-30T22:33:57.000Z"
+      "updatedAt": "2026-08-01T12:53:20.000Z"
     }
   ],
   "apps": [],
@@ -71,30 +71,30 @@
       "status": "active",
       "archived": false,
       "approvalSource": "registry",
-      "updatedAt": "2026-07-30T22:33:57.000Z"
+      "updatedAt": "2026-08-01T12:53:20.000Z"
     }
   ],
   "activity": [
     {
       "type": "ci",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "EngineeringOS discovery quality: success",
-      "occurredAt": "2026-07-30T22:34:09.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30587591007"
-    },
-    {
-      "type": "pull_request",
-      "repository": "JuanCarlosBP/portfolio",
-      "title": "docs(portfolio): align readmes after w01d02",
-      "occurredAt": "2026-07-30T22:33:58.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/pull/11"
+      "title": "EngineeringOS discovery quality: running",
+      "occurredAt": "2026-08-01T12:53:22.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30700604703"
     },
     {
       "type": "commit",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "docs(portfolio): align readmes after w01d02 (#11)",
-      "occurredAt": "2026-07-30T22:33:57.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/commit/0f2b969c03dc7feb4467c9a52f77a4d255f9fcc6"
+      "title": "Merge pull request #13 from JuanCarlosBP/docs/p01-w01d03-evidence-template",
+      "occurredAt": "2026-08-01T12:53:20.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/3c6ae1b3001e1ebd08e28e77c64ada9789160e39"
+    },
+    {
+      "type": "pull_request",
+      "repository": "JuanCarlosBP/portfolio",
+      "title": "test(w0013pm): discovery engineeringos",
+      "occurredAt": "2026-08-01T12:53:20.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/13"
     }
   ],
   "degraded": false,
