@@ -6,9 +6,40 @@ Los cambios relevantes de EngineeringOS se registran en este documento.
 
 ### Próximo
 
-- Crear una plantilla reutilizable de evidencia.
-- Medir la recuperación de contexto entre sesiones.
+- Ejecutar EOS-005 y medir la recuperación de contexto.
 - Definir la política para registrar decisiones técnicas.
+
+## [W01D03] - 2026-08-01
+
+### Añadido
+
+- Plantilla reutilizable de evidencia.
+- Evidencia real del incremento W01D03.
+- Validador ejecutable con 46 comprobaciones.
+- Once pruebas del caso válido y de fallos relevantes.
+- Separación explícita entre hechos observados y objetivos pendientes.
+- Registro de comandos, códigos de salida, métricas, riesgos y limitaciones.
+
+### Cambiado
+
+- El workflow incorpora el gate de evidencia.
+- EOS-004 pasa a `Terminado` en el cambio candidato.
+- La Definition of Done exige plantilla canónica o excepción documentada.
+- README raíz y README de EngineeringOS actualizados para W01D03.
+
+### Validación local
+
+- 21/21 pruebas automáticas.
+- Gate de discovery: 40/40.
+- Gate de planificación: 39/39.
+- Gate de evidencia: 46/46.
+
+### Limitaciones conocidas
+
+- La validación remota se registra en GitHub después de verificar cada SHA.
+- El validador no determina por sí solo la utilidad empresarial.
+- La cumplimentación continúa requiriendo revisión humana.
+- La CLI y el proceso de release permanecen fuera del alcance.
 
 ## [W01D02] - 2026-07-30
 

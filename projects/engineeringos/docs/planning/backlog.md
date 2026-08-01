@@ -111,7 +111,7 @@ Un elemento está `Preparado` cuando contiene:
 | 1 | `EOS-001` | `P0` | Contrato de planificación y terminado | Terminado | W01D01 |
 | 2 | `EOS-002` | `P0` | Validador ejecutable del contrato | Terminado | EOS-001 |
 | 3 | `EOS-003` | `P0` | Pruebas y CI del contrato | Terminado | EOS-002 |
-| 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | En curso | EOS-001 |
+| 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | Terminado | EOS-001 |
 | 5 | `EOS-005` | `P1` | Recuperación de contexto | Pendiente | EOS-001 |
 | 6 | `EOS-006` | `P1` | Política de decisiones técnicas | Pendiente | EOS-001 |
 | 7 | `EOS-007` | `P1` | Medición de carga administrativa | Pendiente | EOS-004 |
@@ -189,7 +189,7 @@ El contrato se prueba localmente y mediante GitHub Actions.
 ## EOS-004 · Plantilla reutilizable de evidencia
 
 **Prioridad:** `P1`
-**Estado:** En curso
+**Estado:** Terminado
 **Dependencia:** EOS-001
 
 ### Resultado observable
@@ -203,6 +203,15 @@ siguiente acción mediante una estructura común.
 - Registra resultados observados.
 - Distingue hechos de objetivos.
 - Evita duplicar información ya enlazada.
+
+### Evidencia entregada
+
+- Plantilla: `docs/templates/increment-evidence-template.md`.
+- Evidencia W01D03: `docs/evidence/w01d03-validation.md`.
+- Validador: `tools/validate_evidence.py`.
+- Pruebas: `tests/test_validate_evidence.py`.
+- Workflow: `.github/workflows/engineeringos-discovery.yml`.
+- Issue: [#12](https://github.com/JuanCarlosBP/portfolio/issues/12).
 
 ## EOS-005 · Recuperación de contexto
 
