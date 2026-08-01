@@ -86,6 +86,7 @@ Una tarea `En curso`, `En validación` o `Bloqueada` no está terminada.
 - [ ] Existen casos incorrectos cuando corresponda.
 - [ ] Existe un fallo controlado para el riesgo principal.
 - [ ] Se conservan comandos y resultados.
+- [ ] La evidencia utiliza la plantilla canónica o documenta explícitamente una excepción.
 - [ ] Las limitaciones automáticas están documentadas.
 - [ ] Existe revisión humana de aspectos no automatizables.
 

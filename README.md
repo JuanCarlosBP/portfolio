@@ -37,7 +37,7 @@ Integración continua
 Entrega y evidencia verificables
 ```
 
-**Estado actual:** W01D02 completado y validado.
+**Estado actual:** W01D03 · contrato reutilizable de evidencia implementado.
 
 ## Evolución verificable
 
@@ -91,6 +91,34 @@ Evidencias principales:
 - [ADR-0002](projects/engineeringos/docs/adr/ADR-0002-executable-planning-contract.md)
 - [Evidencia W01D02](projects/engineeringos/docs/evidence/w01d02-validation.md)
 
+### W01D03 · Plantilla reutilizable de evidencia
+
+El tercer incremento incorpora un contrato común para conservar evidencia:
+
+- plantilla canónica con hechos, objetivos, comandos, métricas y riesgos;
+- separación explícita entre resultados observados y objetivos pendientes;
+- validador ejecutable con 46 comprobaciones;
+- once pruebas nuevas de casos correctos y fallos relevantes;
+- 21/21 pruebas automáticas totales;
+- quality gate de discovery: 40/40;
+- quality gate de planificación: 39/39;
+- quality gate de evidencia: 46/46;
+- integración del nuevo gate en GitHub Actions;
+- actualización del backlog y de la Definition of Done;
+- revisión de todos los README afectados.
+
+La evidencia distingue la validación local del cierre remoto; la trazabilidad
+definitiva de PR, CI e integración se conserva en GitHub.
+
+Evidencias principales:
+
+- [Issue #12 · Plantilla reutilizable de evidencia](https://github.com/JuanCarlosBP/portfolio/issues/12)
+- [Commit AM](https://github.com/JuanCarlosBP/portfolio/commit/376d9263e4b2a91f2e10e9f4ae87c4ca86e2b50d)
+- [Plantilla de evidencia](projects/engineeringos/docs/templates/increment-evidence-template.md)
+- [Validador de evidencia](projects/engineeringos/tools/validate_evidence.py)
+- [Pruebas del contrato](projects/engineeringos/tests/test_validate_evidence.py)
+- [Evidencia W01D03](projects/engineeringos/docs/evidence/w01d03-validation.md)
+
 ## Acceso al proyecto
 
 - [README de EngineeringOS](projects/engineeringos/README.md)
@@ -115,6 +143,9 @@ revisables dentro del repositorio:
 - Políticas de prioridad y estados.
 - Límites de trabajo en curso.
 - Definition of Done reutilizable.
+- Plantillas reutilizables de evidencia.
+- Validación ejecutable de evidencias documentales.
+- Clasificación de métricas observadas, objetivo y no medidas.
 - Validación de contratos documentales mediante código.
 - Trazabilidad entre requisito, cambio, prueba y entrega.
 - Registro de decisiones mediante ADR.
@@ -151,11 +182,12 @@ exista una evidencia técnica revisable.
 
 ## Siguiente incremento
 
-El siguiente paso priorizado de EngineeringOS es **EOS-004**:
+El siguiente paso priorizado de EngineeringOS es **EOS-005**:
 
-- crear una plantilla reutilizable de evidencia;
-- reducir duplicación entre incrementos;
-- conservar comandos, resultados, métricas, riesgos, límites y siguiente acción.
+- crear una ubicación canónica del estado;
+- reconstruir contexto usando únicamente el repositorio;
+- ejecutar un ejercicio real en diez minutos o menos;
+- registrar el tiempo, los bloqueos y la siguiente acción.
 
 ## Perfil profesional
 

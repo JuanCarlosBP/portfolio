@@ -44,3 +44,6 @@ jobs:
 
       - name: Validate planning contract
         run: python projects/engineeringos/tools/validate_planning.py
+
+      - name: Validate evidence contract
+        run: python projects/engineeringos/tools/validate_evidence.py
