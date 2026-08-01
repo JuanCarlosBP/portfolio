@@ -4,6 +4,7 @@
 **Fase:** Discovery y planificación inicial
 **Día de trabajo:** W01D02
 **Fecha de ejecución:** 2026-07-30
+**Última actualización:** 2026-08-01
 **Issue relacionada:** [#8](https://github.com/JuanCarlosBP/portfolio/issues/8)
 **Rama:** `docs/p01-w01d02-backlog-dod`
 **Estado:** Validado en W01D02
@@ -110,7 +111,7 @@ Un elemento está `Preparado` cuando contiene:
 | 1 | `EOS-001` | `P0` | Contrato de planificación y terminado | Terminado | W01D01 |
 | 2 | `EOS-002` | `P0` | Validador ejecutable del contrato | Terminado | EOS-001 |
 | 3 | `EOS-003` | `P0` | Pruebas y CI del contrato | Terminado | EOS-002 |
-| 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | Pendiente | EOS-001 |
+| 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | En curso | EOS-001 |
 | 5 | `EOS-005` | `P1` | Recuperación de contexto | Pendiente | EOS-001 |
 | 6 | `EOS-006` | `P1` | Política de decisiones técnicas | Pendiente | EOS-001 |
 | 7 | `EOS-007` | `P1` | Medición de carga administrativa | Pendiente | EOS-004 |
@@ -188,7 +189,7 @@ El contrato se prueba localmente y mediante GitHub Actions.
 ## EOS-004 · Plantilla reutilizable de evidencia
 
 **Prioridad:** `P1`
-**Estado:** Pendiente
+**Estado:** En curso
 **Dependencia:** EOS-001
 
 ### Resultado observable
