@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-01T12:53:42.610Z",
+  "generatedAt": "2026-08-03T22:36:29.372Z",
   "generatorVersion": "3.2.4",
   "owner": {
     "login": "JuanCarlosBP",
@@ -26,40 +26,40 @@
       ],
       "featured": true,
       "latestCommit": {
-        "sha": "3c6ae1b3001e1ebd08e28e77c64ada9789160e39",
-        "shortSha": "3c6ae1b",
-        "message": "Merge pull request #13 from JuanCarlosBP/docs/p01-w01d03-evidence-template",
-        "date": "2026-08-01T12:53:20.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/commit/3c6ae1b3001e1ebd08e28e77c64ada9789160e39"
+        "sha": "0797bdb4fcf49a64cdbc916806cf770526163aac",
+        "shortSha": "0797bdb",
+        "message": "Merge pull request #15 from JuanCarlosBP/docs/p01-w01d04-context-recovery",
+        "date": "2026-08-03T22:36:16.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/0797bdb4fcf49a64cdbc916806cf770526163aac"
       },
       "latestMergedPullRequest": {
-        "number": 13,
-        "title": "test(w0013pm): discovery engineeringos",
-        "mergedAt": "2026-08-01T12:53:20.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/pull/13"
+        "number": 15,
+        "title": "test(w0014pm): discovery engineeringos",
+        "mergedAt": "2026-08-03T22:36:16.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/15"
       },
       "latestRelease": null,
       "ci": {
         "workflowName": "EngineeringOS discovery quality",
         "workflowPath": ".github/workflows/engineeringos-discovery.yml",
         "branch": "main",
-        "headSha": "3c6ae1b3001e1ebd08e28e77c64ada9789160e39",
+        "headSha": "0797bdb4fcf49a64cdbc916806cf770526163aac",
         "matchesLatestCommit": true,
-        "runId": 30700604703,
-        "status": "success",
-        "conclusion": "success",
-        "startedAt": "2026-08-01T12:53:22.000Z",
-        "completedAt": "2026-08-01T12:53:34.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30700604703"
+        "runId": 30859286865,
+        "status": "running",
+        "conclusion": null,
+        "startedAt": "2026-08-03T22:36:23.000Z",
+        "completedAt": null,
+        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30859286865"
       },
       "evidence": {
         "repository": "https://github.com/JuanCarlosBP/portfolio",
         "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
         "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
-        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/13",
-        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30700604703"
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/15",
+        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30859286865"
       },
-      "updatedAt": "2026-08-01T12:53:20.000Z"
+      "updatedAt": "2026-08-03T22:36:16.000Z"
     }
   ],
   "apps": [],
@@ -71,30 +71,30 @@
       "status": "active",
       "archived": false,
       "approvalSource": "registry",
-      "updatedAt": "2026-08-01T12:53:20.000Z"
+      "updatedAt": "2026-08-03T22:36:16.000Z"
     }
   ],
   "activity": [
     {
       "type": "ci",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "EngineeringOS discovery quality: success",
-      "occurredAt": "2026-08-01T12:53:34.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30700604703"
+      "title": "EngineeringOS discovery quality: running",
+      "occurredAt": "2026-08-03T22:36:23.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30859286865"
     },
     {
       "type": "commit",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "Merge pull request #13 from JuanCarlosBP/docs/p01-w01d03-evidence-template",
-      "occurredAt": "2026-08-01T12:53:20.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/commit/3c6ae1b3001e1ebd08e28e77c64ada9789160e39"
+      "title": "Merge pull request #15 from JuanCarlosBP/docs/p01-w01d04-context-recovery",
+      "occurredAt": "2026-08-03T22:36:16.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/0797bdb4fcf49a64cdbc916806cf770526163aac"
     },
     {
       "type": "pull_request",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "test(w0013pm): discovery engineeringos",
-      "occurredAt": "2026-08-01T12:53:20.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/pull/13"
+      "title": "test(w0014pm): discovery engineeringos",
+      "occurredAt": "2026-08-03T22:36:16.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/15"
     }
   ],
   "degraded": false,
