@@ -37,7 +37,7 @@ Integración continua
 Entrega y evidencia verificables
 ```
 
-**Estado actual:** W01D03 · contrato reutilizable de evidencia implementado.
+**Estado actual:** W01D04 · recuperación de contexto y gate ejecutable implementados.
 
 ## Evolución verificable
 
@@ -119,6 +119,26 @@ Evidencias principales:
 - [Pruebas del contrato](projects/engineeringos/tests/test_validate_evidence.py)
 - [Evidencia W01D03](projects/engineeringos/docs/evidence/w01d03-validation.md)
 
+### W01D04 · Recuperación de contexto
+
+El cuarto incremento incorpora:
+
+- estado canónico versionado;
+- ejercicio autónomo completado en 83 segundos;
+- 5/5 campos recuperados y 0 contradicciones;
+- nueve pruebas nuevas y 30/30 pruebas totales;
+- gate de recuperación con 36/36 comprobaciones;
+- integración del gate en GitHub Actions;
+- actualización del backlog, DoD y documentación afectada.
+
+Evidencias principales:
+
+- [Issue #14](https://github.com/JuanCarlosBP/portfolio/issues/14)
+- [Estado canónico](projects/engineeringos/docs/state/current-state.md)
+- [Validador](projects/engineeringos/tools/validate_context_recovery.py)
+- [Pruebas](projects/engineeringos/tests/test_validate_context_recovery.py)
+- [Evidencia W01D04](projects/engineeringos/docs/evidence/w01d04-context-recovery.md)
+
 ## Acceso al proyecto
 
 - [README de EngineeringOS](projects/engineeringos/README.md)
@@ -182,12 +202,12 @@ exista una evidencia técnica revisable.
 
 ## Siguiente incremento
 
-El siguiente paso priorizado de EngineeringOS es **EOS-005**:
+El siguiente paso priorizado de EngineeringOS es **EOS-006**:
 
-- crear una ubicación canónica del estado;
-- reconstruir contexto usando únicamente el repositorio;
-- ejecutar un ejercicio real en diez minutos o menos;
-- registrar el tiempo, los bloqueos y la siguiente acción.
+- definir cuándo una decisión técnica exige ADR;
+- distinguir decisiones triviales de decisiones arquitectónicas;
+- conservar contexto, alternativas, consecuencias y criterio de revisión;
+- evitar documentación innecesaria.
 
 ## Perfil profesional
 

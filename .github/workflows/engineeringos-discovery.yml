@@ -47,3 +47,6 @@ jobs:
 
       - name: Validate evidence contract
         run: python projects/engineeringos/tools/validate_evidence.py
+
+      - name: Validate context recovery contract
+        run: python projects/engineeringos/tools/validate_context_recovery.py

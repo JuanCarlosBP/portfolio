@@ -112,7 +112,7 @@ Un elemento está `Preparado` cuando contiene:
 | 2 | `EOS-002` | `P0` | Validador ejecutable del contrato | Terminado | EOS-001 |
 | 3 | `EOS-003` | `P0` | Pruebas y CI del contrato | Terminado | EOS-002 |
 | 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | Terminado | EOS-001 |
-| 5 | `EOS-005` | `P1` | Recuperación de contexto | En curso | EOS-001 |
+| 5 | `EOS-005` | `P1` | Recuperación de contexto | Terminado | EOS-001 |
 | 6 | `EOS-006` | `P1` | Política de decisiones técnicas | Pendiente | EOS-001 |
 | 7 | `EOS-007` | `P1` | Medición de carga administrativa | Pendiente | EOS-004 |
 | 8 | `EOS-008` | `P2` | CLI local de evidencias | Pendiente | EOS-002, EOS-004 |
@@ -216,7 +216,7 @@ siguiente acción mediante una estructura común.
 ## EOS-005 · Recuperación de contexto
 
 **Prioridad:** `P1`
-**Estado:** En curso
+**Estado:** Terminado
 **Dependencia:** EOS-001
 
 ### Resultado observable
@@ -230,6 +230,15 @@ reconstruirse usando solo el repositorio en diez minutos o menos.
 - El siguiente paso es operativo.
 - Se ejecuta un ejercicio real de recuperación.
 - Se registra el tiempo utilizado.
+
+### Evidencia entregada
+
+- Estado canónico: `docs/state/current-state.md`.
+- Evidencia W01D04: `docs/evidence/w01d04-context-recovery.md`.
+- Validador: `tools/validate_context_recovery.py`.
+- Pruebas: `tests/test_validate_context_recovery.py`.
+- Workflow: `.github/workflows/engineeringos-discovery.yml`.
+- Issue: [#14](https://github.com/JuanCarlosBP/portfolio/issues/14).
 
 ## EOS-006 · Política de decisiones técnicas
 

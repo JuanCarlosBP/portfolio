@@ -103,6 +103,7 @@ Una tarea `En curso`, `En validación` o `Bloqueada` no está terminada.
 ### 6. Documentación
 
 - [ ] Describe el estado real.
+- [ ] Cuando cambia el contexto operativo, existe una ubicación canónica con objetivo, estado, decisiones, bloqueos y siguiente acción.
 - [ ] Las capacidades futuras aparecen como pendientes.
 - [ ] README, ADR, changelog y evidencias son coherentes.
 - [ ] Todos los archivos `README.md` afectados fueron revisados y actualizados.
