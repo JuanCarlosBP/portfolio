@@ -5,7 +5,7 @@ en incrementos trazables, verificables y revisables.
 
 ## Estado
 
-W01D03 · Contrato reutilizable de evidencia implementado.
+W01D04 · Recuperación de contexto y gate ejecutable implementados.
 
 EngineeringOS dispone actualmente de:
 
@@ -22,8 +22,7 @@ EngineeringOS dispone actualmente de:
 - validador ejecutable del contrato de evidencia;
 - pruebas negativas de estructura y contenido mínimo.
 
-La CLI general, la recuperación cronometrada de contexto y el proceso completo de
-release permanecen fuera del alcance actual.
+La CLI general y el proceso completo de release permanecen fuera del alcance actual.
 
 ## Trazabilidad de W01D02
 
@@ -55,6 +54,20 @@ release permanecen fuera del alcance actual.
   [`w01d03-validation.md`](docs/evidence/w01d03-validation.md)
 
 La PR, la CI y la integración se registran como hechos después de verificarse.
+
+## Trazabilidad de W01D04
+
+- Issue: [#14 · Recuperación de contexto](https://github.com/JuanCarlosBP/portfolio/issues/14)
+- Rama: `docs/p01-w01d04-context-recovery`
+- Incremento AM: `docs(w0014am): discovery engineeringos`
+- Incremento PM previsto: `test(w0014pm): discovery engineeringos`
+- Estado canónico: [`current-state.md`](docs/state/current-state.md)
+- Validador: [`validate_context_recovery.py`](tools/validate_context_recovery.py)
+- Pruebas: [`test_validate_context_recovery.py`](tests/test_validate_context_recovery.py)
+- Evidencia: [`w01d04-context-recovery.md`](docs/evidence/w01d04-context-recovery.md)
+- Resultado humano: 5/5 campos, 0 contradicciones y 83 segundos.
+
+La PR, la CI y la integración se registrarán después de verificar sus SHA.
 
 ## Contratos ejecutables
 
@@ -96,6 +109,21 @@ El gate de W01D03 ejecuta 46 comprobaciones sobre:
 - enlaces canónicos sin duplicación;
 - revisión de los dos README afectados.
 
+### Recuperación de contexto
+
+El gate de W01D04 superó 36/36 comprobaciones sobre:
+
+- existencia de las fuentes canónicas;
+- metadatos y trazabilidad del incremento;
+- resultado autónomo del ejercicio;
+- cinco campos recuperados;
+- tiempo inferior a 600 segundos;
+- ausencia de contradicciones;
+- coherencia entre estado, backlog, README, DoD y workflow.
+
+El ejercicio observado recuperó 5/5 campos en 83 segundos, sin red,
+fuentes externas ni ayuda durante la medición.
+
 ## Ejecución local
 
 Desde la raíz del repositorio:
@@ -111,6 +139,8 @@ python projects/engineeringos/tools/validate_discovery.py
 python projects/engineeringos/tools/validate_planning.py
 
 python projects/engineeringos/tools/validate_evidence.py
+
+python projects/engineeringos/tools/validate_context_recovery.py
 ```
 
 No se requieren dependencias externas. El código utiliza la biblioteca estándar
@@ -134,18 +164,23 @@ projects/engineeringos/
 │   ├── evidence/
 │   │   ├── w01d01-validation.md
 │   │   ├── w01d02-validation.md
-│   │   └── w01d03-validation.md
+│   │   ├── w01d03-validation.md
+│   │   └── w01d04-context-recovery.md
 │   ├── planning/
 │   │   └── backlog.md
 │   ├── standards/
 │   │   └── definition-of-done.md
+│   ├── state/
+│   │   └── current-state.md
 │   └── templates/
 │       └── increment-evidence-template.md
 ├── tests/
+│   ├── test_validate_context_recovery.py
 │   ├── test_validate_discovery.py
 │   ├── test_validate_evidence.py
 │   └── test_validate_planning.py
 └── tools/
+    ├── validate_context_recovery.py
     ├── validate_discovery.py
     ├── validate_evidence.py
     └── validate_planning.py
@@ -170,6 +205,6 @@ projects/engineeringos/
 
 ## Siguiente acción
 
-EOS-005: ejecutar una recuperación real de contexto usando solo el repositorio,
-registrar el tiempo utilizado y comprobar que objetivo, estado, decisiones,
-bloqueos y siguiente acción pueden reconstruirse en diez minutos o menos.
+EOS-006: definir cuándo una decisión técnica exige ADR, cuándo basta una
+explicación local y qué contexto, alternativas, consecuencias y criterio de
+revisión deben conservarse.

@@ -6,8 +6,40 @@ Los cambios relevantes de EngineeringOS se registran en este documento.
 
 ### Próximo
 
-- Ejecutar EOS-005 y medir la recuperación de contexto.
-- Definir la política para registrar decisiones técnicas.
+- Ejecutar EOS-006 y definir la política de decisiones técnicas.
+- Preparar la medición de carga administrativa de EOS-007.
+
+## [W01D04] - 2026-08-03
+
+### Añadido
+
+- Estado canónico de EngineeringOS.
+- Validador de recuperación con 36 comprobaciones.
+- Nueve pruebas del contrato y de fallos relevantes.
+- Evidencia reproducible de W01D04.
+- Ejercicio autónomo de recuperación de contexto.
+
+### Cambiado
+
+- EOS-005 pasa a `Terminado`.
+- EOS-006 queda como siguiente elemento `Pendiente`.
+- El workflow incorpora el gate de recuperación.
+- README, backlog, DoD y changelog reflejan el estado de W01D04.
+
+### Validación local
+
+- 30/30 pruebas automáticas.
+- Gate de discovery: 40/40.
+- Gate de planificación: 39/39.
+- Gate de evidencia: 46/46.
+- Gate de recuperación: 36/36.
+- Ejercicio humano: 5/5 campos, 0 contradicciones y 83 segundos.
+
+### Limitaciones conocidas
+
+- El gate no sustituye la revisión semántica humana.
+- La validación remota se registrará después de verificar PR, CI e integración.
+- La CLI y el proceso completo de release permanecen fuera del alcance.
 
 ## [W01D03] - 2026-08-01
 
