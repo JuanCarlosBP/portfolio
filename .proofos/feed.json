@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-05T23:23:48.475Z",
+  "generatedAt": "2026-08-05T23:24:01.277Z",
   "generatorVersion": "3.2.4",
   "owner": {
     "login": "JuanCarlosBP",
@@ -46,10 +46,10 @@
         "headSha": "6e6657833043638a823f8677eca32107cd5512c6",
         "matchesLatestCommit": true,
         "runId": 31056205331,
-        "status": "running",
-        "conclusion": null,
+        "status": "success",
+        "conclusion": "success",
         "startedAt": "2026-08-05T23:23:43.000Z",
-        "completedAt": null,
+        "completedAt": "2026-08-05T23:23:53.000Z",
         "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
       },
       "evidence": {
@@ -78,8 +78,8 @@
     {
       "type": "ci",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "EngineeringOS discovery quality: running",
-      "occurredAt": "2026-08-05T23:23:43.000Z",
+      "title": "EngineeringOS discovery quality: success",
+      "occurredAt": "2026-08-05T23:23:53.000Z",
       "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
     },
     {
