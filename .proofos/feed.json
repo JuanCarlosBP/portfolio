@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T22:36:47.029Z",
+  "generatedAt": "2026-08-05T23:23:48.475Z",
   "generatorVersion": "3.2.4",
   "owner": {
     "login": "JuanCarlosBP",
@@ -26,40 +26,40 @@
       ],
       "featured": true,
       "latestCommit": {
-        "sha": "0797bdb4fcf49a64cdbc916806cf770526163aac",
-        "shortSha": "0797bdb",
-        "message": "Merge pull request #15 from JuanCarlosBP/docs/p01-w01d04-context-recovery",
-        "date": "2026-08-03T22:36:16.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/commit/0797bdb4fcf49a64cdbc916806cf770526163aac"
+        "sha": "6e6657833043638a823f8677eca32107cd5512c6",
+        "shortSha": "6e66578",
+        "message": "[P01][W01D05] Política de decisiones técnicas",
+        "date": "2026-08-05T23:23:34.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/6e6657833043638a823f8677eca32107cd5512c6"
       },
       "latestMergedPullRequest": {
-        "number": 15,
-        "title": "test(w0014pm): discovery engineeringos",
-        "mergedAt": "2026-08-03T22:36:16.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/pull/15"
+        "number": 17,
+        "title": "[P01][W01D05] Política de decisiones técnicas",
+        "mergedAt": "2026-08-05T23:23:34.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/17"
       },
       "latestRelease": null,
       "ci": {
         "workflowName": "EngineeringOS discovery quality",
         "workflowPath": ".github/workflows/engineeringos-discovery.yml",
         "branch": "main",
-        "headSha": "0797bdb4fcf49a64cdbc916806cf770526163aac",
+        "headSha": "6e6657833043638a823f8677eca32107cd5512c6",
         "matchesLatestCommit": true,
-        "runId": 30859286865,
-        "status": "success",
-        "conclusion": "success",
-        "startedAt": "2026-08-03T22:36:23.000Z",
-        "completedAt": "2026-08-03T22:36:37.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30859286865"
+        "runId": 31056205331,
+        "status": "running",
+        "conclusion": null,
+        "startedAt": "2026-08-05T23:23:43.000Z",
+        "completedAt": null,
+        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
       },
       "evidence": {
         "repository": "https://github.com/JuanCarlosBP/portfolio",
         "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
         "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
-        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/15",
-        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30859286865"
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/17",
+        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
       },
-      "updatedAt": "2026-08-03T22:36:16.000Z"
+      "updatedAt": "2026-08-05T23:23:34.000Z"
     }
   ],
   "apps": [],
@@ -71,30 +71,30 @@
       "status": "active",
       "archived": false,
       "approvalSource": "registry",
-      "updatedAt": "2026-08-03T22:36:16.000Z"
+      "updatedAt": "2026-08-05T23:23:34.000Z"
     }
   ],
   "activity": [
     {
       "type": "ci",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "EngineeringOS discovery quality: success",
-      "occurredAt": "2026-08-03T22:36:37.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/30859286865"
+      "title": "EngineeringOS discovery quality: running",
+      "occurredAt": "2026-08-05T23:23:43.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
     },
     {
       "type": "commit",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "Merge pull request #15 from JuanCarlosBP/docs/p01-w01d04-context-recovery",
-      "occurredAt": "2026-08-03T22:36:16.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/commit/0797bdb4fcf49a64cdbc916806cf770526163aac"
+      "title": "[P01][W01D05] Política de decisiones técnicas",
+      "occurredAt": "2026-08-05T23:23:34.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/6e6657833043638a823f8677eca32107cd5512c6"
     },
     {
       "type": "pull_request",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "test(w0014pm): discovery engineeringos",
-      "occurredAt": "2026-08-03T22:36:16.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/pull/15"
+      "title": "[P01][W01D05] Política de decisiones técnicas",
+      "occurredAt": "2026-08-05T23:23:34.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/17"
     }
   ],
   "degraded": false,
