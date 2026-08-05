@@ -235,9 +235,15 @@ def validate(repository_root: Path) -> list[Check]:
             in state,
         ),
         Check(
-            "EOS-006 is pending",
-            "| Estado del foco actual | `Pendiente` |"
-            in state,
+            "EOS-006 is active during W01D05",
+            bool(
+                re.search(
+                    r"(?m)^\| Estado del foco actual "
+                    r"\| `(?:En curso|En validación)` "
+                    r"\|$",
+                    state,
+                )
+            ),
         ),
         Check(
             "EOS-005 is the last completed item",

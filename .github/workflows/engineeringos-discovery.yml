@@ -50,3 +50,6 @@ jobs:
 
       - name: Validate context recovery contract
         run: python projects/engineeringos/tools/validate_context_recovery.py
+
+      - name: Validate technical decision policy
+        run: python projects/engineeringos/tools/validate_decision_policy.py

@@ -4,10 +4,44 @@ Los cambios relevantes de EngineeringOS se registran en este documento.
 
 ## [Unreleased]
 
-### Próximo
+### W01D05 · En validación local
 
-- Ejecutar EOS-006 y definir la política de decisiones técnicas.
-- Preparar la medición de carga administrativa de EOS-007.
+#### Añadido
+
+- Política con `ADR`, `LOCAL_NOTE` y `NO_EXTRA_RECORD`.
+- Plantillas de ADR y nota local.
+- ADR-0003 y nota local real.
+- Validador con 44 comprobaciones.
+- Diez pruebas nuevas.
+- Ejercicio de doce escenarios.
+- Evidencia candidata W01D05.
+
+#### Cambiado
+
+- El contrato contextual acepta EOS-006 activo.
+- El workflow incorpora el quinto gate.
+- EOS-006 pasa a `En validación`.
+- README, backlog, DoD y estado reflejan W01D05.
+
+#### Validación local observada
+
+- 40/40 pruebas.
+- Discovery: 40/40.
+- Planificación: 39/39.
+- Evidencia: 46/46.
+- Contexto: 36/36.
+- Decisiones: 44/44.
+- Escenarios: 12/12.
+- Contradicciones: 0.
+
+#### Pendiente de validación remota
+
+- Commit PM.
+- Push definitivo.
+- Pull request.
+- CI del SHA PM.
+- Integración en `main`.
+- Cierre de la issue #16.
 
 ## [W01D04] - 2026-08-03
 

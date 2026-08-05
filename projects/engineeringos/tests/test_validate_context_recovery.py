@@ -119,7 +119,7 @@ class ContextRecoveryValidatorTests(unittest.TestCase):
             """# Estado actual
 
 | Foco actual | `EOS-006 · Política de decisiones técnicas` |
-| Estado del foco actual | `Pendiente` |
+| Estado del foco actual | `En curso` |
 | Último elemento completado | `EOS-005 · Recuperación de contexto` |
 """,
         )

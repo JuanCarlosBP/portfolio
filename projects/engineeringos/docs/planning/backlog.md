@@ -113,7 +113,7 @@ Un elemento está `Preparado` cuando contiene:
 | 3 | `EOS-003` | `P0` | Pruebas y CI del contrato | Terminado | EOS-002 |
 | 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | Terminado | EOS-001 |
 | 5 | `EOS-005` | `P1` | Recuperación de contexto | Terminado | EOS-001 |
-| 6 | `EOS-006` | `P1` | Política de decisiones técnicas | En curso | EOS-001 |
+| 6 | `EOS-006` | `P1` | Política de decisiones técnicas | En validación | EOS-001 |
 | 7 | `EOS-007` | `P1` | Medición de carga administrativa | Pendiente | EOS-004 |
 | 8 | `EOS-008` | `P2` | CLI local de evidencias | Pendiente | EOS-002, EOS-004 |
 | 9 | `EOS-009` | `P2` | Release reproducible | Pendiente | EOS-003, EOS-004 |
@@ -243,7 +243,7 @@ reconstruirse usando solo el repositorio en diez minutos o menos.
 ## EOS-006 · Política de decisiones técnicas
 
 **Prioridad:** `P1`
-**Estado:** En curso
+**Estado:** En validación
 **Dependencia:** EOS-001
 **Issue:** [#16](https://github.com/JuanCarlosBP/portfolio/issues/16)
 **Día de ejecución:** W01D05
@@ -267,7 +267,7 @@ su impacto y evitando documentación innecesaria.
 - Conserva un ADR real y una nota local real.
 - Evita ADR innecesarios para decisiones triviales.
 
-### Evidencia en construcción
+### Evidencia candidata
 
 - Política: `docs/standards/technical-decision-policy.md`.
 - Plantilla ADR: `docs/templates/adr-template.md`.
@@ -275,7 +275,26 @@ su impacto y evitando documentación innecesaria.
 - ADR-0003: `docs/adr/ADR-0003-technical-decision-policy.md`.
 - Nota local:
   `docs/decisions/local/w01d05-reuse-existing-workflow.md`.
+- Validador: `tools/validate_decision_policy.py`.
+- Pruebas: `tests/test_validate_decision_policy.py`.
+- Ejercicio:
+  `docs/evidence/w01d05-decision-classification-exercise.md`.
+- Evidencia:
+  `docs/evidence/w01d05-technical-decision-policy.md`.
+- Workflow: `.github/workflows/engineeringos-discovery.yml`.
 - Issue: [#16](https://github.com/JuanCarlosBP/portfolio/issues/16).
+
+### Validación local observada
+
+- 40/40 pruebas.
+- Gate de decisiones: 44/44.
+- Gate contextual: 36/36.
+- Escenarios: 12/12.
+- Coincidencias: 12/12.
+- Contradicciones: 0.
+
+EOS-006 permanece `En validación` hasta verificar commit PM, PR, CI, merge y
+estado final de `main`.
 
 ## EOS-007 · Medición de carga administrativa
 

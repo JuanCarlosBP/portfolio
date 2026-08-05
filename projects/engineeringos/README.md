@@ -5,7 +5,9 @@ en incrementos trazables, verificables y revisables.
 
 ## Estado
 
-W01D04 · Recuperación de contexto y gate ejecutable implementados.
+W01D04 · Recuperación de contexto permanece como último incremento integrado.
+
+W01D05 · Política de decisiones técnicas se encuentra validada localmente y pendiente de entrega remota.
 
 EngineeringOS dispone actualmente de:
 
@@ -20,7 +22,11 @@ EngineeringOS dispone actualmente de:
 - CI mediante GitHub Actions.
 - plantilla reutilizable de evidencia;
 - validador ejecutable del contrato de evidencia;
-- pruebas negativas de estructura y contenido mínimo.
+- pruebas negativas de estructura y contenido mínimo;
+- política proporcional de decisiones técnicas;
+- plantillas de ADR y nota local;
+- gate de decisiones con 44 comprobaciones;
+- ejercicio reproducible de clasificación.
 
 La CLI general y el proceso completo de release permanecen fuera del alcance actual.
 
@@ -68,6 +74,36 @@ La PR, la CI y la integración se registran como hechos después de verificarse.
 - Resultado humano: 5/5 campos, 0 contradicciones y 83 segundos.
 
 La PR, la CI y la integración se registrarán después de verificar sus SHA.
+
+## Trazabilidad de W01D05
+
+- Issue: [#16 · Política de decisiones técnicas](https://github.com/JuanCarlosBP/portfolio/issues/16)
+- Rama: `docs/p01-w01d05-technical-decision-policy`
+- Commit AM:
+  `86f5f9006e07e02d811332feb2b1bba43e8dcd6f`
+- Commit PM previsto: `test(w0015pm): discovery engineeringos`
+- Política:
+  [`technical-decision-policy.md`](docs/standards/technical-decision-policy.md)
+- Plantilla ADR:
+  [`adr-template.md`](docs/templates/adr-template.md)
+- Plantilla local:
+  [`local-decision-note-template.md`](docs/templates/local-decision-note-template.md)
+- ADR:
+  [`ADR-0003`](docs/adr/ADR-0003-technical-decision-policy.md)
+- Nota local:
+  [`w01d05-reuse-existing-workflow.md`](docs/decisions/local/w01d05-reuse-existing-workflow.md)
+- Ejercicio:
+  [`w01d05-decision-classification-exercise.md`](docs/evidence/w01d05-decision-classification-exercise.md)
+- Validador:
+  [`validate_decision_policy.py`](tools/validate_decision_policy.py)
+- Pruebas:
+  [`test_validate_decision_policy.py`](tests/test_validate_decision_policy.py)
+- Evidencia:
+  [`w01d05-technical-decision-policy.md`](docs/evidence/w01d05-technical-decision-policy.md)
+- Resultado local: 40/40 pruebas, 44/44 comprobaciones,
+  12/12 escenarios y 0 contradicciones.
+
+La PR, la CI, el merge y el cierre de la issue permanecen pendientes.
 
 ## Contratos ejecutables
 
@@ -124,6 +160,27 @@ El gate de W01D04 superó 36/36 comprobaciones sobre:
 El ejercicio observado recuperó 5/5 campos en 83 segundos, sin red,
 fuentes externas ni ayuda durante la medición.
 
+### Política de decisiones técnicas
+
+El gate de W01D05 ejecuta 44 comprobaciones sobre:
+
+- política y secciones canónicas;
+- tres niveles de clasificación;
+- precedencia y algoritmo;
+- desencadenantes ADR;
+- reglas locales;
+- casos triviales;
+- plantillas;
+- ADR-0003;
+- nota local real;
+- coherencia entre backlog y estado.
+
+El ejercicio contiene doce escenarios: cuatro ADR, cuatro notas locales y
+cuatro cambios sin registro adicional. Se observaron 12/12 coincidencias,
+0 contradicciones y 0 grupos de reglas inválidos.
+
+La materialidad y la calidad semántica continúan requiriendo revisión humana.
+
 ## Ejecución local
 
 Desde la raíz del repositorio:
@@ -141,6 +198,8 @@ python projects/engineeringos/tools/validate_planning.py
 python projects/engineeringos/tools/validate_evidence.py
 
 python projects/engineeringos/tools/validate_context_recovery.py
+
+python projects/engineeringos/tools/validate_decision_policy.py
 ```
 
 No se requieren dependencias externas. El código utiliza la biblioteca estándar
@@ -155,32 +214,39 @@ projects/engineeringos/
 ├── docs/
 │   ├── adr/
 │   │   ├── ADR-0001-executable-discovery-gate.md
-│   │   └── ADR-0002-executable-planning-contract.md
+│   │   ├── ADR-0002-executable-planning-contract.md
+│   │   └── ADR-0003-technical-decision-policy.md
+│   ├── decisions/
+│   │   └── local/
+│   │       └── w01d05-reuse-existing-workflow.md
 │   ├── discovery/
-│   │   ├── current-process.md
-│   │   ├── problem-statement.md
-│   │   ├── success-metrics.md
-│   │   └── users-and-needs.md
 │   ├── evidence/
 │   │   ├── w01d01-validation.md
 │   │   ├── w01d02-validation.md
 │   │   ├── w01d03-validation.md
-│   │   └── w01d04-context-recovery.md
+│   │   ├── w01d04-context-recovery.md
+│   │   ├── w01d05-decision-classification-exercise.md
+│   │   └── w01d05-technical-decision-policy.md
 │   ├── planning/
 │   │   └── backlog.md
 │   ├── standards/
-│   │   └── definition-of-done.md
+│   │   ├── definition-of-done.md
+│   │   └── technical-decision-policy.md
 │   ├── state/
 │   │   └── current-state.md
 │   └── templates/
-│       └── increment-evidence-template.md
+│       ├── adr-template.md
+│       ├── increment-evidence-template.md
+│       └── local-decision-note-template.md
 ├── tests/
 │   ├── test_validate_context_recovery.py
+│   ├── test_validate_decision_policy.py
 │   ├── test_validate_discovery.py
 │   ├── test_validate_evidence.py
 │   └── test_validate_planning.py
 └── tools/
     ├── validate_context_recovery.py
+    ├── validate_decision_policy.py
     ├── validate_discovery.py
     ├── validate_evidence.py
     └── validate_planning.py
@@ -192,6 +258,8 @@ projects/engineeringos/
   validación ejecutable del discovery.
 - [`ADR-0002`](docs/adr/ADR-0002-executable-planning-contract.md):
   validación ejecutable del backlog, WIP y Definition of Done.
+- [`ADR-0003`](docs/adr/ADR-0003-technical-decision-policy.md):
+  política proporcional para ADR, notas locales y cambios sin registro adicional.
 
 ## Limitaciones actuales
 
@@ -205,6 +273,6 @@ projects/engineeringos/
 
 ## Siguiente acción
 
-EOS-006: definir cuándo una decisión técnica exige ADR, cuándo basta una
-explicación local y qué contexto, alternativas, consecuencias y criterio de
-revisión deben conservarse.
+Auditar las trece rutas PM, crear el commit
+`test(w0015pm): discovery engineeringos`, publicar la rama, abrir la pull
+request y verificar la CI antes de integrar EOS-006.
