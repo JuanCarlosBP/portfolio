@@ -89,6 +89,7 @@ Una tarea `En curso`, `En validación` o `Bloqueada` no está terminada.
 - [ ] La evidencia utiliza la plantilla canónica o documenta explícitamente una excepción.
 - [ ] Las limitaciones automáticas están documentadas.
 - [ ] Existe revisión humana de aspectos no automatizables.
+- [ ] Las decisiones técnicas aplicables se clasifican como ADR, nota local o cambio sin registro adicional.
 
 ### 5. Calidad y seguridad
 
@@ -203,6 +204,22 @@ La documentación debe:
 - utilizar nombres, rutas, métricas y estados coherentes;
 - enlazar la evidencia real;
 - conservar riesgos y limitaciones.
+
+## Regla sobre decisiones técnicas
+
+Toda decisión técnica debe pasar por la política versionada de EngineeringOS.
+
+Los resultados permitidos son:
+
+- `ADR` para impacto material, transversal, duradero o difícil de revertir;
+- `LOCAL_NOTE` para alcance limitado, reversible y local;
+- `NO_EXTRA_RECORD` para cambios triviales, mecánicos o ya gobernados.
+
+Una nota local no puede utilizarse para evitar un ADR necesario.
+
+La coincidencia terminológica no basta: debe existir impacto material.
+
+La clasificación automática no sustituye la revisión humana.
 
 ## Responsabilidad humana
 

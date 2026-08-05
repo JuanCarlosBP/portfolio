@@ -37,7 +37,9 @@ Integración continua
 Entrega y evidencia verificables
 ```
 
-**Estado actual:** W01D04 · recuperación de contexto y gate ejecutable implementados.
+**Estado integrado:** W01D04 · recuperación de contexto y gate ejecutable implementados.
+
+**Estado candidato local:** W01D05 · política de decisiones técnicas validada localmente y pendiente de commit PM, PR, CI e integración.
 
 ## Evolución verificable
 
@@ -139,6 +141,35 @@ Evidencias principales:
 - [Pruebas](projects/engineeringos/tests/test_validate_context_recovery.py)
 - [Evidencia W01D04](projects/engineeringos/docs/evidence/w01d04-context-recovery.md)
 
+### W01D05 · Política de decisiones técnicas
+
+El quinto incremento se encuentra validado localmente y todavía no está
+integrado en `main`.
+
+El candidato incluye:
+
+- clasificación `ADR`, `LOCAL_NOTE` y `NO_EXTRA_RECORD`;
+- diez desencadenantes ADR;
+- seis reglas locales;
+- siete casos triviales;
+- plantillas de ADR y nota local;
+- ADR-0003 y una nota local real;
+- gate con 44/44 comprobaciones;
+- diez pruebas nuevas y 40/40 pruebas totales;
+- doce escenarios con 12/12 coincidencias;
+- 0 contradicciones y 0 grupos inválidos.
+
+Evidencias candidatas:
+
+- [Política](projects/engineeringos/docs/standards/technical-decision-policy.md)
+- [ADR-0003](projects/engineeringos/docs/adr/ADR-0003-technical-decision-policy.md)
+- [Ejercicio](projects/engineeringos/docs/evidence/w01d05-decision-classification-exercise.md)
+- [Evidencia W01D05](projects/engineeringos/docs/evidence/w01d05-technical-decision-policy.md)
+- [Validador](projects/engineeringos/tools/validate_decision_policy.py)
+- [Pruebas](projects/engineeringos/tests/test_validate_decision_policy.py)
+
+La PR, la CI y la integración permanecen pendientes.
+
 ## Acceso al proyecto
 
 - [README de EngineeringOS](projects/engineeringos/README.md)
@@ -169,6 +200,9 @@ revisables dentro del repositorio:
 - Validación de contratos documentales mediante código.
 - Trazabilidad entre requisito, cambio, prueba y entrega.
 - Registro de decisiones mediante ADR.
+- Política proporcional de decisiones técnicas.
+- Plantillas reutilizables de ADR y nota local.
+- Validación ejecutable de decisiones.
 - Diagnóstico y recuperación segura ante errores.
 
 ## Tecnologías en desarrollo
@@ -202,12 +236,18 @@ exista una evidencia técnica revisable.
 
 ## Siguiente incremento
 
-El siguiente paso priorizado de EngineeringOS es **EOS-006**:
+El siguiente paso priorizado de EngineeringOS es **EOS-006**, actualmente en
+validación local:
 
-- definir cuándo una decisión técnica exige ADR;
-- distinguir decisiones triviales de decisiones arquitectónicas;
-- conservar contexto, alternativas, consecuencias y criterio de revisión;
-- evitar documentación innecesaria.
+- auditar las trece rutas PM;
+- crear y publicar el commit PM;
+- abrir la pull request;
+- verificar la CI del SHA entregado;
+- integrar y comprobar `main`;
+- cerrar la issue después de verificar el resultado remoto.
+
+Tras cerrar EOS-006, el siguiente elemento será
+**EOS-007 · Medición de carga administrativa**.
 
 ## Perfil profesional
 
