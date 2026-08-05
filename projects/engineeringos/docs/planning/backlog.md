@@ -113,7 +113,7 @@ Un elemento está `Preparado` cuando contiene:
 | 3 | `EOS-003` | `P0` | Pruebas y CI del contrato | Terminado | EOS-002 |
 | 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | Terminado | EOS-001 |
 | 5 | `EOS-005` | `P1` | Recuperación de contexto | Terminado | EOS-001 |
-| 6 | `EOS-006` | `P1` | Política de decisiones técnicas | Pendiente | EOS-001 |
+| 6 | `EOS-006` | `P1` | Política de decisiones técnicas | En curso | EOS-001 |
 | 7 | `EOS-007` | `P1` | Medición de carga administrativa | Pendiente | EOS-004 |
 | 8 | `EOS-008` | `P2` | CLI local de evidencias | Pendiente | EOS-002, EOS-004 |
 | 9 | `EOS-009` | `P2` | Release reproducible | Pendiente | EOS-003, EOS-004 |
@@ -243,18 +243,39 @@ reconstruirse usando solo el repositorio en diez minutos o menos.
 ## EOS-006 · Política de decisiones técnicas
 
 **Prioridad:** `P1`
-**Estado:** Pendiente
+**Estado:** En curso
 **Dependencia:** EOS-001
+**Issue:** [#16](https://github.com/JuanCarlosBP/portfolio/issues/16)
+**Día de ejecución:** W01D05
 
 ### Resultado observable
 
-Se define cuándo una decisión exige ADR y cuándo basta una explicación local.
+Una decisión técnica puede clasificarse de forma reproducible como ADR, nota
+local o cambio sin registro adicional, conservando el contexto proporcional a
+su impacto y evitando documentación innecesaria.
 
 ### Criterios de aceptación
 
-- Incluye desencadenantes claros.
-- Exige contexto, decisión, alternativas y consecuencias.
+- Incluye diez desencadenantes claros de ADR.
+- Exige contexto, decisión, alternativas, consecuencias, trade-off y revisión.
+- Define seis reglas para notas locales.
+- Define siete casos que no necesitan registro específico.
+- Incluye un algoritmo reproducible de seis pasos.
+- Define cinco estados del ciclo de vida.
+- Proporciona una plantilla de ADR.
+- Proporciona una plantilla de nota local.
+- Conserva un ADR real y una nota local real.
 - Evita ADR innecesarios para decisiones triviales.
+
+### Evidencia en construcción
+
+- Política: `docs/standards/technical-decision-policy.md`.
+- Plantilla ADR: `docs/templates/adr-template.md`.
+- Plantilla local: `docs/templates/local-decision-note-template.md`.
+- ADR-0003: `docs/adr/ADR-0003-technical-decision-policy.md`.
+- Nota local:
+  `docs/decisions/local/w01d05-reuse-existing-workflow.md`.
+- Issue: [#16](https://github.com/JuanCarlosBP/portfolio/issues/16).
 
 ## EOS-007 · Medición de carga administrativa
 
