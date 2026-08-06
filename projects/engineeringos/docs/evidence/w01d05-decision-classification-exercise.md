@@ -13,7 +13,7 @@
 | Notas locales esperadas | 4 |
 | Sin registro adicional esperados | 4 |
 | Contradicciones permitidas | 0 |
-| Estado | En validación |
+| Estado | Terminado |
 
 ## Objetivo
 

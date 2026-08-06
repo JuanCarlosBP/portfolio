@@ -4,9 +4,11 @@ Los cambios relevantes de EngineeringOS se registran en este documento.
 
 ## [Unreleased]
 
-### W01D05 · En validación local
+Sin cambios pendientes.
 
-#### Añadido
+## [W01D05] - 2026-08-06
+
+### Añadido
 
 - Política con `ADR`, `LOCAL_NOTE` y `NO_EXTRA_RECORD`.
 - Plantillas de ADR y nota local.
@@ -14,16 +16,19 @@ Los cambios relevantes de EngineeringOS se registran en este documento.
 - Validador con 44 comprobaciones.
 - Diez pruebas nuevas.
 - Ejercicio de doce escenarios.
-- Evidencia candidata W01D05.
+- Evidencia final de W01D05.
+- Quinto gate en GitHub Actions.
 
-#### Cambiado
+### Cambiado
 
-- El contrato contextual acepta EOS-006 activo.
-- El workflow incorpora el quinto gate.
-- EOS-006 pasa a `En validación`.
-- README, backlog, DoD y estado reflejan W01D05.
+- El contrato contextual reconoce el cierre de EOS-006.
+- EOS-006 pasa a `Terminado`.
+- EOS-007 queda como siguiente elemento `Pendiente`.
+- README, backlog, estado y evidencia reflejan el cierre remoto.
+- ADR-0003 pasa de `Propuesta` a `Aceptada`.
+- La política pasa de `En validación` a `Validada`.
 
-#### Validación local observada
+### Validación observada
 
 - 40/40 pruebas.
 - Discovery: 40/40.
@@ -33,15 +38,18 @@ Los cambios relevantes de EngineeringOS se registran en este documento.
 - Decisiones: 44/44.
 - Escenarios: 12/12.
 - Contradicciones: 0.
+- PR #17 integrada mediante squash.
+- Commit PM: `a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea`.
+- Commit de integración: `6e6657833043638a823f8677eca32107cd5512c6`.
+- CI de PR: run `31055354496` · `success`.
+- CI de `main`: run `31056205331` · `success`.
+- Issue #16 cerrada con 22/22 criterios.
+- Rama local y remota eliminadas.
 
-#### Pendiente de validación remota
+### Limitaciones conocidas
 
-- Commit PM.
-- Push definitivo.
-- Pull request.
-- CI del SHA PM.
-- Integración en `main`.
-- Cierre de la issue #16.
+- Los gates verifican contratos deterministas, no toda la calidad semántica.
+- La clasificación material continúa requiriendo revisión humana.
 
 ## [W01D04] - 2026-08-03
 

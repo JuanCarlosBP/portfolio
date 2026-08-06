@@ -227,66 +227,72 @@ def validate(repository_root: Path) -> list[Check]:
             ),
         ),
         Check(
-            "state points to EOS-006",
+            "state points to EOS-007",
             (
                 "| Foco actual | "
+                "`EOS-007 · Medición de carga administrativa` |"
+            )
+            in state,
+        ),
+        Check(
+            "EOS-007 is pending after W01D05",
+            (
+                "| Estado del foco actual | `Pendiente` |"
+                in state
+            ),
+        ),
+        Check(
+            "EOS-006 is the last completed item",
+            (
+                "| Último elemento completado | "
                 "`EOS-006 · Política de decisiones técnicas` |"
             )
             in state,
         ),
         Check(
-            "EOS-006 is active during W01D05",
-            bool(
-                re.search(
-                    r"(?m)^\| Estado del foco actual "
-                    r"\| `(?:En curso|En validación)` "
-                    r"\|$",
-                    state,
-                )
-            ),
-        ),
-        Check(
-            "EOS-005 is the last completed item",
+            "backlog summary marks EOS-006 terminated",
             (
-                "| Último elemento completado | "
-                "`EOS-005 · Recuperación de contexto` |"
-            )
-            in state,
-        ),
-        Check(
-            "backlog summary marks EOS-005 terminated",
-            (
-                "| 5 | `EOS-005` | `P1` | "
-                "Recuperación de contexto | Terminado | EOS-001 |"
+                "| 6 | `EOS-006` | `P1` | "
+                "Política de decisiones técnicas | "
+                "Terminado | EOS-001 |"
             )
             in backlog,
         ),
         Check(
-            "backlog detail marks EOS-005 terminated",
+            "backlog detail marks EOS-006 terminated",
             bool(
                 re.search(
-                    r"(?ms)^## EOS-005 · Recuperación de contexto\n"
+                    r"(?ms)^## EOS-006 · "
+                    r"Política de decisiones técnicas\n"
                     r".*?\*\*Estado:\*\* Terminado"
-                    r".*?(?=^## EOS-006 ·)",
+                    r".*?(?=^## EOS-007 ·)",
                     backlog,
                 )
             ),
         ),
         Check(
-            "root README reflects W01D04 and EOS-006",
+            "root README reflects W01D05 and EOS-007",
             (
-                "W01D04 · recuperación de contexto"
+                "W01D05 · política de decisiones técnicas"
                 in root_readme
-                and "El siguiente paso priorizado "
-                "de EngineeringOS es **EOS-006**"
+                and "El siguiente elemento priorizado "
+                "es **EOS-007"
                 in root_readme
             ),
         ),
         Check(
             "project README reflects measured context gate",
             (
-                "W01D04 · Recuperación de contexto"
-                in project_readme
+                (
+                    "W01D04 · Recuperación de contexto"
+                    in project_readme
+                    or (
+                        "## Trazabilidad de W01D04"
+                        in project_readme
+                        and "### Recuperación de contexto"
+                        in project_readme
+                    )
+                )
                 and "36/36 comprobaciones"
                 in project_readme
                 and "83 segundos"

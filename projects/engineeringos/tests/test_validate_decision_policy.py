@@ -118,7 +118,7 @@ class DecisionPolicyValidatorTests(unittest.TestCase):
                     "https://github.com/JuanCarlosBP/"
                     "portfolio/issues/16)"
                 ),
-                "**Estado:** En validación",
+                "**Estado:** Validada",
                 "**Versión de la política:** `1.0.0`",
             )
         )
@@ -276,7 +276,7 @@ class DecisionPolicyValidatorTests(unittest.TestCase):
             (
                 "# ADR-0003 · Política",
                 "",
-                "**Estado:** Propuesta",
+                "**Estado:** Aceptada",
                 (
                     "**Decisión relacionada:** "
                     "W01D05 · EOS-006"
@@ -396,7 +396,7 @@ class DecisionPolicyValidatorTests(unittest.TestCase):
             (
                 "| 6 | `EOS-006` | `P1` | "
                 "Política de decisiones técnicas | "
-                "En curso | EOS-001 |\n"
+                "Terminado | EOS-001 |\n"
                 "| 7 | `EOS-007` | `P1` | "
                 "Medición | Pendiente | EOS-004 |\n"
             ),
@@ -409,25 +409,25 @@ class DecisionPolicyValidatorTests(unittest.TestCase):
             ),
             "\n".join(
                 (
-                    "| Día lógico | `W01D05` |",
+                    "| Día lógico cerrado | `W01D05` |",
                     (
-                        "| Foco actual | `EOS-006 · "
-                        "Política de decisiones técnicas` |"
+                        "| Foco actual | `EOS-007 · "
+                        "Medición de carga administrativa` |"
                     ),
                     (
                         "| Estado del foco actual | "
-                        "`En curso` |"
+                        "`Pendiente` |"
                     ),
                     (
-                        "| Issue activa | [#16]("
+                        "| Issue cerrada | [#16]("
                         "https://github.com/JuanCarlosBP/"
                         "portfolio/issues/16) |"
                     ),
                     (
-                        "| Rama activa | "
-                        "`docs/p01-w01d05-"
-                        "technical-decision-policy` |"
+                        "| Último elemento completado | "
+                        "`EOS-006 · Política de decisiones técnicas` |"
                     ),
+                    "| Rama activa | Ninguna |",
                     "",
                 )
             ),
@@ -532,7 +532,7 @@ class DecisionPolicyValidatorTests(unittest.TestCase):
                 "projects/engineeringos/docs/adr/"
                 "ADR-0003-technical-decision-policy.md"
             ),
-            "**Estado:** Propuesta",
+            "**Estado:** Aceptada",
             "**Estado:** Borrador",
         )
 
@@ -576,7 +576,7 @@ class DecisionPolicyValidatorTests(unittest.TestCase):
             0,
         )
 
-    def test_non_active_current_state_fails(
+    def test_non_pending_current_state_fails(
         self,
     ) -> None:
         self.replace(
@@ -586,11 +586,11 @@ class DecisionPolicyValidatorTests(unittest.TestCase):
             ),
             (
                 "| Estado del foco actual | "
-                "`En curso` |"
+                "`Pendiente` |"
             ),
             (
                 "| Estado del foco actual | "
-                "`Pendiente` |"
+                "`En curso` |"
             ),
         )
 

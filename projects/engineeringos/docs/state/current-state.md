@@ -5,23 +5,38 @@
 | Campo | Valor |
 |---|---|
 | Proyecto | EngineeringOS |
-| Día lógico | `W01D05` |
+| Día lógico cerrado | `W01D05` |
 | Fecha de actualización | `2026-08-06` |
-| Foco actual | `EOS-006 · Política de decisiones técnicas` |
-| Estado del foco actual | `En validación` |
-| Último elemento completado | `EOS-005 · Recuperación de contexto` |
-| Issue activa | [#16](https://github.com/JuanCarlosBP/portfolio/issues/16) |
-| Rama activa | `docs/p01-w01d05-technical-decision-policy` |
-| Commit AM | `86f5f9006e07e02d811332feb2b1bba43e8dcd6f` |
-| Commit PM | Pendiente |
-| Pull request | Pendiente |
-| CI del candidato PM | Pendiente |
-| Integración en main | Pendiente |
+| Foco actual | `EOS-007 · Medición de carga administrativa` |
+| Estado del foco actual | `Pendiente` |
+| Último elemento completado | `EOS-006 · Política de decisiones técnicas` |
+| Issue cerrada | [#16](https://github.com/JuanCarlosBP/portfolio/issues/16) |
+| Pull request integrada | [#17](https://github.com/JuanCarlosBP/portfolio/pull/17) |
+| Commit PM | `a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea` |
+| Commit de integración | `6e6657833043638a823f8677eca32107cd5512c6` |
+| CI de la PR | Run `31055354496` · `success` |
+| CI de main | Run `31056205331` · `success` |
+| Rama activa | Ninguna |
+| Bloqueos | Ninguno |
 
-## Objetivo actual
+## Estado de cierre de W01D05
 
-Completar la validación y entrega de una política proporcional que clasifique
-decisiones técnicas como ADR, nota local o cambio sin registro adicional.
+W01D05 está terminado.
+
+Se verificaron:
+
+- política proporcional de decisiones;
+- plantillas de ADR y nota local;
+- ADR-0003 y nota local real;
+- 40/40 pruebas;
+- cinco gates verdes;
+- 12/12 escenarios;
+- 0 contradicciones;
+- PR #17 integrada mediante squash;
+- issue #16 cerrada con 22/22 criterios;
+- CI verde en la PR y en `main`;
+- eliminación de la rama local y remota;
+- reconciliación de las fuentes canónicas post-merge.
 
 ## Decisiones vigentes
 
@@ -33,62 +48,29 @@ decisiones técnicas como ADR, nota local o cambio sin registro adicional.
 - Mantener Markdown como formato canónico.
 - Utilizar la biblioteca estándar de Python.
 - Conservar revisión humana.
-- No terminar EOS-006 antes de verificar PR, CI y merge.
 
 ## Bloqueos
 
 No se observan bloqueos activos.
 
-Permanecen pendientes:
-
-- commit PM;
-- push definitivo;
-- pull request;
-- CI del SHA PM;
-- integración;
-- cierre de la issue.
-
-## Trabajo observado en W01D05
-
-- Base verificada:
-  `2f59037191b5db2dd2a06eea214a185f1a4420f5`.
-- Commit AM publicado:
-  `86f5f9006e07e02d811332feb2b1bba43e8dcd6f`.
-- Política y plantillas creadas.
-- ADR-0003 y nota local real creados.
-- Diez pruebas nuevas.
-- 40/40 pruebas.
-- Discovery: 40/40.
-- Planificación: 39/39.
-- Evidencia: 46/46.
-- Contexto: 36/36.
-- Decisiones: 44/44.
-- Ejercicio: 12/12.
-- Coincidencias: 12/12.
-- Contradicciones: 0.
-- S09 corregido.
-- Candidato documental PM preparado.
-
 ## Siguiente acción operativa
 
-Auditar las trece rutas PM, preparar exclusivamente esas rutas, revisar el
-índice, crear el commit `test(w0015pm): discovery engineeringos` y publicar la
-rama.
+Preparar EOS-007 dentro de W01D06.
+
+EOS-007 permanece `Pendiente` y no se considera iniciado por aparecer como
+siguiente elemento priorizado.
 
 ## Fuentes canónicas
 
 | Ruta | Finalidad |
 |---|---|
-| `projects/engineeringos/docs/planning/backlog.md` | Estado de EOS-006. |
-| `projects/engineeringos/docs/standards/technical-decision-policy.md` | Política. |
-| `projects/engineeringos/docs/templates/adr-template.md` | Plantilla ADR. |
-| `projects/engineeringos/docs/templates/local-decision-note-template.md` | Plantilla local. |
-| `projects/engineeringos/docs/adr/ADR-0003-technical-decision-policy.md` | ADR real. |
-| `projects/engineeringos/docs/decisions/local/w01d05-reuse-existing-workflow.md` | Nota local. |
-| `projects/engineeringos/tools/validate_decision_policy.py` | Gate. |
-| `projects/engineeringos/tests/test_validate_decision_policy.py` | Pruebas. |
-| `projects/engineeringos/docs/evidence/w01d05-decision-classification-exercise.md` | Ejercicio. |
-| `projects/engineeringos/docs/evidence/w01d05-technical-decision-policy.md` | Evidencia. |
+| `projects/engineeringos/docs/planning/backlog.md` | EOS-006 terminado y EOS-007 pendiente. |
+| `projects/engineeringos/docs/standards/technical-decision-policy.md` | Política validada. |
+| `projects/engineeringos/docs/adr/ADR-0003-technical-decision-policy.md` | Decisión aceptada. |
+| `projects/engineeringos/docs/evidence/w01d05-technical-decision-policy.md` | Evidencia final. |
+| `projects/engineeringos/docs/evidence/w01d05-decision-classification-exercise.md` | Ejercicio terminado. |
+| `projects/engineeringos/tools/validate_decision_policy.py` | Gate de decisiones. |
+| `projects/engineeringos/tools/validate_context_recovery.py` | Gate de contexto. |
 | `.github/workflows/engineeringos-discovery.yml` | Cinco gates. |
 | `README.md` | Estado público. |
 | `projects/engineeringos/README.md` | Estado técnico. |
@@ -96,15 +78,15 @@ rama.
 ## Protocolo de recuperación
 
 1. Abrir este archivo.
-2. Recuperar objetivo, estado, decisiones, bloqueos y siguiente acción.
-3. Confirmar cada dato mediante las rutas canónicas.
-4. Distinguir working tree, staging, commit, rama remota, PR, CI y merge.
-5. No presentar como integrado un cambio local.
-6. Confirmar SHA y rama antes de operar.
+2. Confirmar que W01D05 figura como cerrado.
+3. Confirmar EOS-006 como último elemento terminado.
+4. Confirmar EOS-007 como siguiente elemento pendiente.
+5. Verificar backlog, evidencia, README y changelog.
+6. No presentar EOS-007 como iniciado antes de crear su incremento.
 
 ## Regla de actualización
 
 - Actualizar cuando cambien foco, estado, decisión, bloqueo o siguiente acción.
-- Mantener coherencia con backlog y README.
-- No declarar EOS-006 terminado antes de integrar y verificar.
-- Conservar pendientes remotos de forma explícita.
+- Mantener coherencia con backlog, README, changelog y evidencia.
+- No reabrir W01D05 después de completar esta reconciliación salvo que aparezca
+  una contradicción verificable.

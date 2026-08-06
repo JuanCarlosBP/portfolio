@@ -37,9 +37,7 @@ Integración continua
 Entrega y evidencia verificables
 ```
 
-**Estado integrado:** W01D04 · recuperación de contexto y gate ejecutable implementados.
-
-**Estado candidato local:** W01D05 · política de decisiones técnicas validada localmente y pendiente de commit PM, PR, CI e integración.
+**Estado integrado:** W01D05 · política de decisiones técnicas entregada, validada e integrada.
 
 ## Evolución verificable
 
@@ -143,8 +141,8 @@ Evidencias principales:
 
 ### W01D05 · Política de decisiones técnicas
 
-El quinto incremento se encuentra validado localmente y todavía no está
-integrado en `main`.
+El quinto incremento está integrado en `main` y su cierre remoto fue
+verificado.
 
 El candidato incluye:
 
@@ -159,7 +157,7 @@ El candidato incluye:
 - doce escenarios con 12/12 coincidencias;
 - 0 contradicciones y 0 grupos inválidos.
 
-Evidencias candidatas:
+Evidencias principales:
 
 - [Política](projects/engineeringos/docs/standards/technical-decision-policy.md)
 - [ADR-0003](projects/engineeringos/docs/adr/ADR-0003-technical-decision-policy.md)
@@ -168,7 +166,9 @@ Evidencias candidatas:
 - [Validador](projects/engineeringos/tools/validate_decision_policy.py)
 - [Pruebas](projects/engineeringos/tests/test_validate_decision_policy.py)
 
-La PR, la CI y la integración permanecen pendientes.
+La entrega quedó integrada mediante la PR #17. El commit PM fue
+`a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea`, el squash resultante fue `6e6657833043638a823f8677eca32107cd5512c6` y las CI
+de la PR y de `main` finalizaron correctamente en los runs `31055354496` y `31056205331`.
 
 ## Acceso al proyecto
 
@@ -236,18 +236,11 @@ exista una evidencia técnica revisable.
 
 ## Siguiente incremento
 
-El siguiente paso priorizado de EngineeringOS es **EOS-006**, actualmente en
-validación local:
+El siguiente elemento priorizado es **EOS-007 · Medición de carga
+administrativa**.
 
-- auditar las trece rutas PM;
-- crear y publicar el commit PM;
-- abrir la pull request;
-- verificar la CI del SHA entregado;
-- integrar y comprobar `main`;
-- cerrar la issue después de verificar el resultado remoto.
-
-Tras cerrar EOS-006, el siguiente elemento será
-**EOS-007 · Medición de carga administrativa**.
+Permanece `Pendiente`. Su preparación e inicio pertenecen a W01D06 y no forman
+parte del cierre de W01D05.
 
 ## Perfil profesional
 

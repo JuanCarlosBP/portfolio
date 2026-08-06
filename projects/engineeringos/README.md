@@ -5,9 +5,7 @@ en incrementos trazables, verificables y revisables.
 
 ## Estado
 
-W01D04 · Recuperación de contexto permanece como último incremento integrado.
-
-W01D05 · Política de decisiones técnicas se encuentra validada localmente y pendiente de entrega remota.
+W01D05 · Política de decisiones técnicas es el último incremento integrado y verificado.
 
 EngineeringOS dispone actualmente de:
 
@@ -81,7 +79,11 @@ La PR, la CI y la integración se registrarán después de verificar sus SHA.
 - Rama: `docs/p01-w01d05-technical-decision-policy`
 - Commit AM:
   `86f5f9006e07e02d811332feb2b1bba43e8dcd6f`
-- Commit PM previsto: `test(w0015pm): discovery engineeringos`
+- Commit PM: `a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea`
+- Pull request: [#17](https://github.com/JuanCarlosBP/portfolio/pull/17)
+- Commit de integración: `6e6657833043638a823f8677eca32107cd5512c6`
+- CI de la PR: run `31055354496` · `success`
+- CI de `main`: run `31056205331` · `success`
 - Política:
   [`technical-decision-policy.md`](docs/standards/technical-decision-policy.md)
 - Plantilla ADR:
@@ -103,7 +105,8 @@ La PR, la CI y la integración se registrarán después de verificar sus SHA.
 - Resultado local: 40/40 pruebas, 44/44 comprobaciones,
   12/12 escenarios y 0 contradicciones.
 
-La PR, la CI, el merge y el cierre de la issue permanecen pendientes.
+La PR fue integrada mediante squash, la issue #16 quedó cerrada con
+22/22 criterios y la rama de trabajo fue eliminada local y remotamente.
 
 ## Contratos ejecutables
 
@@ -273,6 +276,5 @@ projects/engineeringos/
 
 ## Siguiente acción
 
-Auditar las trece rutas PM, crear el commit
-`test(w0015pm): discovery engineeringos`, publicar la rama, abrir la pull
-request y verificar la CI antes de integrar EOS-006.
+Mantener W01D05 cerrado y preparar, sin iniciarlo todavía, el incremento
+**EOS-007 · Medición de carga administrativa** correspondiente a W01D06.

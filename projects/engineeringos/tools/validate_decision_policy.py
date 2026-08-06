@@ -216,18 +216,12 @@ def active_backlog_items(content: str) -> list[str]:
     ]
 
 
-def current_state_is_active(content: str) -> bool:
-    """Accept the active W01D05 states."""
-
-    match = re.search(
-        r"(?m)^\| Estado del foco actual "
-        r"\| `(?P<state>[^`]+)` \|$",
-        content,
-    )
+def current_state_is_final(content: str) -> bool:
+    """Require EOS-007 pending after the W01D05 closure."""
 
     return (
-        match is not None
-        and match.group("state") in ACTIVE_STATES
+        "| Estado del foco actual | `Pendiente` |"
+        in content
     )
 
 
@@ -323,6 +317,7 @@ def validate(repository_root: Path) -> list[Check]:
                     "**Día de trabajo:** `W01D05`",
                     "**Fecha de ejecución:** `2026-08-05`",
                     f"**Issue:** [#16]({ISSUE_URL})",
+                    "**Estado:** Validada",
                     "**Versión de la política:** `1.0.0`",
                 ),
             ),
@@ -536,7 +531,7 @@ def validate(repository_root: Path) -> list[Check]:
             bool(
                 re.search(
                     r"(?m)^\*\*Estado:\*\* "
-                    r"(?:Propuesta|Aceptada)$",
+                    r"Aceptada$",
                     adr,
                 )
             ),
@@ -663,34 +658,41 @@ def validate(repository_root: Path) -> list[Check]:
         ),
         Check(
             "backlog",
-            "has exactly EOS-006 active",
-            active_backlog_items(backlog) == ["EOS-006"],
+            "marks EOS-006 terminated with no active item",
+            (
+                active_backlog_items(backlog) == []
+                and (
+                    "| 6 | `EOS-006` | `P1` | "
+                    "Política de decisiones técnicas | "
+                    "Terminado | EOS-001 |"
+                )
+                in backlog
+            ),
         ),
         Check(
             "current state",
-            "identifies active W01D05",
+            "identifies final W01D05 state",
             (
                 contains_all(
                     state,
                     (
-                        "| Día lógico | `W01D05` |",
+                        "| Día lógico cerrado | `W01D05` |",
                         (
-                            "| Foco actual | `EOS-006 · "
-                            "Política de decisiones técnicas` |"
+                            "| Foco actual | `EOS-007 · "
+                            "Medición de carga administrativa` |"
                         ),
                         (
-                            "| Issue activa | "
+                            "| Último elemento completado | "
+                            "`EOS-006 · Política de decisiones técnicas` |"
+                        ),
+                        (
+                            "| Issue cerrada | "
                             f"[#16]({ISSUE_URL}) |"
                         ),
-                        (
-                            "| Rama activa | "
-                            f"`{BRANCH}` |"
-                        ),
+                        "| Rama activa | Ninguna |",
                     ),
                 )
-                and current_state_is_active(state)
-                and "Crear el commit PM de W01D04"
-                not in state
+                and current_state_is_final(state)
             ),
         ),
         Check(
