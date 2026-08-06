@@ -1,6 +1,6 @@
 # ADR-0003 · Política proporcional de decisiones técnicas
 
-**Estado:** Propuesta
+**Estado:** Aceptada
 
 **Fecha:** 2026-08-05
 

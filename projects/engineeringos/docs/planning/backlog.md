@@ -4,7 +4,7 @@
 **Fase:** Discovery y planificación inicial
 **Día de trabajo:** W01D02
 **Fecha de ejecución:** 2026-07-30
-**Última actualización:** 2026-08-03
+**Última actualización:** 2026-08-06
 **Issue relacionada:** [#8](https://github.com/JuanCarlosBP/portfolio/issues/8)
 **Rama:** `docs/p01-w01d02-backlog-dod`
 **Estado:** Validado en W01D02
@@ -113,7 +113,7 @@ Un elemento está `Preparado` cuando contiene:
 | 3 | `EOS-003` | `P0` | Pruebas y CI del contrato | Terminado | EOS-002 |
 | 4 | `EOS-004` | `P1` | Plantilla reutilizable de evidencia | Terminado | EOS-001 |
 | 5 | `EOS-005` | `P1` | Recuperación de contexto | Terminado | EOS-001 |
-| 6 | `EOS-006` | `P1` | Política de decisiones técnicas | En validación | EOS-001 |
+| 6 | `EOS-006` | `P1` | Política de decisiones técnicas | Terminado | EOS-001 |
 | 7 | `EOS-007` | `P1` | Medición de carga administrativa | Pendiente | EOS-004 |
 | 8 | `EOS-008` | `P2` | CLI local de evidencias | Pendiente | EOS-002, EOS-004 |
 | 9 | `EOS-009` | `P2` | Release reproducible | Pendiente | EOS-003, EOS-004 |
@@ -243,7 +243,7 @@ reconstruirse usando solo el repositorio en diez minutos o menos.
 ## EOS-006 · Política de decisiones técnicas
 
 **Prioridad:** `P1`
-**Estado:** En validación
+**Estado:** Terminado
 **Dependencia:** EOS-001
 **Issue:** [#16](https://github.com/JuanCarlosBP/portfolio/issues/16)
 **Día de ejecución:** W01D05
@@ -267,7 +267,7 @@ su impacto y evitando documentación innecesaria.
 - Conserva un ADR real y una nota local real.
 - Evita ADR innecesarios para decisiones triviales.
 
-### Evidencia candidata
+### Evidencia entregada
 
 - Política: `docs/standards/technical-decision-policy.md`.
 - Plantilla ADR: `docs/templates/adr-template.md`.
@@ -293,8 +293,10 @@ su impacto y evitando documentación innecesaria.
 - Coincidencias: 12/12.
 - Contradicciones: 0.
 
-EOS-006 permanece `En validación` hasta verificar commit PM, PR, CI, merge y
-estado final de `main`.
+EOS-006 quedó integrado mediante la PR #17. El commit PM fue
+`a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea`, el squash resultante fue `6e6657833043638a823f8677eca32107cd5512c6`, las CI de
+PR y `main` finalizaron correctamente en los runs `31055354496` y
+`31056205331`, y la issue #16 quedó cerrada con 22/22 criterios.
 
 ## EOS-007 · Medición de carga administrativa
 

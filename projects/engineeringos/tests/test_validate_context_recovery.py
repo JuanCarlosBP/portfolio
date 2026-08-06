@@ -118,21 +118,21 @@ class ContextRecoveryValidatorTests(unittest.TestCase):
             "projects/engineeringos/docs/state/current-state.md",
             """# Estado actual
 
-| Foco actual | `EOS-006 · Política de decisiones técnicas` |
-| Estado del foco actual | `En curso` |
-| Último elemento completado | `EOS-005 · Recuperación de contexto` |
+| Foco actual | `EOS-007 · Medición de carga administrativa` |
+| Estado del foco actual | `Pendiente` |
+| Último elemento completado | `EOS-006 · Política de decisiones técnicas` |
 """,
         )
 
         self.write(
             "projects/engineeringos/docs/planning/backlog.md",
-            """| 5 | `EOS-005` | `P1` | Recuperación de contexto | Terminado | EOS-001 |
+            """| 6 | `EOS-006` | `P1` | Política de decisiones técnicas | Terminado | EOS-001 |
 
-## EOS-005 · Recuperación de contexto
+## EOS-006 · Política de decisiones técnicas
 
 **Estado:** Terminado
 
-## EOS-006 · Política de decisiones técnicas
+## EOS-007 · Medición de carga administrativa
 """,
         )
 
@@ -148,9 +148,9 @@ class ContextRecoveryValidatorTests(unittest.TestCase):
         self.write(
             "README.md",
             (
-                "W01D04 · recuperación de contexto\n"
-                "El siguiente paso priorizado de "
-                "EngineeringOS es **EOS-006**\n"
+                "W01D05 · política de decisiones técnicas\n"
+                "El siguiente elemento priorizado "
+                "es **EOS-007 · Medición de carga administrativa**\n"
             ),
         )
 
@@ -220,8 +220,8 @@ class ContextRecoveryValidatorTests(unittest.TestCase):
     def test_wrong_current_focus_fails(self) -> None:
         self.replace(
             "projects/engineeringos/docs/state/current-state.md",
+            "EOS-007 · Medición de carga administrativa",
             "EOS-006 · Política de decisiones técnicas",
-            "EOS-005 · Recuperación de contexto",
         )
 
         self.assertNotEqual(self.run_gate().returncode, 0)
@@ -244,8 +244,8 @@ class ContextRecoveryValidatorTests(unittest.TestCase):
     def test_root_readme_without_next_item_fails(self) -> None:
         self.replace(
             "README.md",
-            "EOS-006",
             "EOS-007",
+            "EOS-008",
         )
 
         self.assertNotEqual(self.run_gate().returncode, 0)

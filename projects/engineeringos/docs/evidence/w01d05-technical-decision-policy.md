@@ -10,8 +10,8 @@
 | Issue | [#16](https://github.com/JuanCarlosBP/portfolio/issues/16) |
 | Rama | `docs/p01-w01d05-technical-decision-policy` |
 | Commit AM | `86f5f9006e07e02d811332feb2b1bba43e8dcd6f` |
-| Commit PM | `test(w0015pm): discovery engineeringos` |
-| Estado | En validación |
+| Commit PM | `a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea` |
+| Estado | Terminado |
 | Versión de la plantilla | `1.0.0` |
 
 ## Propósito
@@ -56,20 +56,17 @@ documentación innecesaria.
 - Contradicciones: 0.
 - Grupos de reglas inválidos: 0.
 - La evidencia insuficiente de S09 fue corregida.
-- El staging permanece vacío.
-- No existe todavía commit PM, pull request, CI del SHA PM ni integración.
+- Commit PM: `a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea`.
+- PR #17 integrada mediante squash.
+- Commit de integración: `6e6657833043638a823f8677eca32107cd5512c6`.
+- CI de la PR: run `31055354496` · `success`.
+- CI de `main`: run `31056205331` · `success`.
+- Issue #16 cerrada con 22/22 criterios.
+- Rama local y remota eliminadas.
 
 ## Objetivos aún no verificados
 
-- Crear el commit PM.
-- Publicar la rama definitiva.
-- Crear la pull request.
-- Obtener CI verde para el SHA PM.
-- Integrar mediante squash.
-- Verificar `main`.
-- Cerrar la issue #16.
-- Limpiar ramas.
-- Marcar EOS-006 como terminado.
+- Ninguno dentro del alcance aprobado de W01D05.
 
 ## Comandos y resultados
 
@@ -98,7 +95,7 @@ documentación innecesaria.
 | Observada | Coincidencias | 12/12 | Ejercicio | Resultado reproducible. |
 | Observada | Contradicciones | 0 | Ejercicio | Sin discrepancias. |
 | Observada | Grupos inválidos | 0 | Ejercicio | Sin mezcla de niveles. |
-| Objetivo | CI del SHA PM | Pendiente | GitHub Actions | Requiere push y PR. |
+| Observada | CI del SHA PM | `success` | Run `31055354496` | El commit PM fue validado remotamente. |
 
 ## Decisión y trade-off
 
@@ -117,8 +114,8 @@ documentación innecesaria.
 | Limitación | El gate no evalúa toda la semántica. | Revisión humana. | Activa |
 | Riesgo | Usar nota local para evitar ADR. | Precedencia ADR. | Mitigado |
 | Riesgo | Crear ADR por palabras aisladas. | Exigir impacto material. | Mitigado |
-| Pendiente | CI del commit PM. | Crear push y PR. | Pendiente |
-| Pendiente | Integración en `main`. | Verificar merge. | Pendiente |
+| Resuelto | CI del commit PM. | Run `31055354496` verificado. | Cerrado |
+| Resuelto | Integración en `main`. | Squash `6e6657833043638a823f8677eca32107cd5512c6` y run `31056205331` verificados. | Cerrado |
 
 ## Impacto documental
 
@@ -127,7 +124,7 @@ documentación innecesaria.
 | `README.md` | Actualizar. |
 | `projects/engineeringos/README.md` | Actualizar. |
 | Changelog | Actualizar. |
-| Backlog | Pasar EOS-006 a `En validación`. |
+| Backlog | Pasar EOS-006 a `Terminado`. |
 | DoD | Añadir clasificación de decisiones. |
 | Workflow | Añadir quinto gate. |
 | Estado canónico | Actualizar siguiente acción. |
@@ -137,17 +134,18 @@ documentación innecesaria.
 | Elemento | Referencia |
 |---|---|
 | Issue | https://github.com/JuanCarlosBP/portfolio/issues/16 |
-| Pull request | Pendiente de creación |
-| CI | Pendiente de ejecución |
-| Integración en `main` | Pendiente |
+| Pull request | https://github.com/JuanCarlosBP/portfolio/pull/17 |
+| CI de PR | Run `31055354496` · `success` |
+| CI de main | Run `31056205331` · `success` |
+| Integración en `main` | `6e6657833043638a823f8677eca32107cd5512c6` |
 | Commit AM | `86f5f9006e07e02d811332feb2b1bba43e8dcd6f` |
-| Commit PM | `test(w0015pm): discovery engineeringos` |
+| Commit PM | `a0aa18fcf6df27adec955250b3f0e6fa9f8ebaea` |
 | Evidencia | `projects/engineeringos/docs/evidence/w01d05-technical-decision-policy.md` |
 
 ## Siguiente acción
 
-Auditar las trece rutas PM, preparar exclusivamente esas rutas, revisar el
-índice y crear el commit PM sin crear todavía la pull request.
+Mantener W01D05 cerrado y preparar EOS-007 dentro de W01D06 sin considerar que
+su mera aparición como siguiente elemento equivalga a haberlo iniciado.
 
 ## Reglas de uso
 

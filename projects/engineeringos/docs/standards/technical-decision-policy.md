@@ -5,7 +5,7 @@
 **Día de trabajo:** `W01D05`<br>
 **Fecha de ejecución:** `2026-08-05`<br>
 **Issue:** [#16](https://github.com/JuanCarlosBP/portfolio/issues/16)<br>
-**Estado:** En validación<br>
+**Estado:** Validada<br>
 **Versión de la política:** `1.0.0`
 
 ## Propósito
