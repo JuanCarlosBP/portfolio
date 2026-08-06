@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-05T23:24:01.277Z",
+  "generatedAt": "2026-08-06T00:02:57.723Z",
   "generatorVersion": "3.2.4",
   "owner": {
     "login": "JuanCarlosBP",
@@ -26,40 +26,40 @@
       ],
       "featured": true,
       "latestCommit": {
-        "sha": "6e6657833043638a823f8677eca32107cd5512c6",
-        "shortSha": "6e66578",
-        "message": "[P01][W01D05] Política de decisiones técnicas",
-        "date": "2026-08-05T23:23:34.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/commit/6e6657833043638a823f8677eca32107cd5512c6"
+        "sha": "6c56edb2d77f9198534fe6068c6e38996438fa8e",
+        "shortSha": "6c56edb",
+        "message": "[P01][W01D05] Reconciliar cierre post-merge",
+        "date": "2026-08-06T00:02:49.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/commit/6c56edb2d77f9198534fe6068c6e38996438fa8e"
       },
       "latestMergedPullRequest": {
-        "number": 17,
-        "title": "[P01][W01D05] Política de decisiones técnicas",
-        "mergedAt": "2026-08-05T23:23:34.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/pull/17"
+        "number": 18,
+        "title": "[P01][W01D05] Reconciliar cierre post-merge",
+        "mergedAt": "2026-08-06T00:02:50.000Z",
+        "url": "https://github.com/JuanCarlosBP/portfolio/pull/18"
       },
       "latestRelease": null,
       "ci": {
         "workflowName": "EngineeringOS discovery quality",
         "workflowPath": ".github/workflows/engineeringos-discovery.yml",
         "branch": "main",
-        "headSha": "6e6657833043638a823f8677eca32107cd5512c6",
+        "headSha": "6c56edb2d77f9198534fe6068c6e38996438fa8e",
         "matchesLatestCommit": true,
-        "runId": 31056205331,
-        "status": "success",
-        "conclusion": "success",
-        "startedAt": "2026-08-05T23:23:43.000Z",
-        "completedAt": "2026-08-05T23:23:53.000Z",
-        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
+        "runId": 31058400058,
+        "status": "running",
+        "conclusion": null,
+        "startedAt": "2026-08-06T00:02:52.000Z",
+        "completedAt": null,
+        "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31058400058"
       },
       "evidence": {
         "repository": "https://github.com/JuanCarlosBP/portfolio",
         "issue": "https://github.com/JuanCarlosBP/portfolio/issues/1",
         "pullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/2",
-        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/17",
-        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
+        "latestPullRequest": "https://github.com/JuanCarlosBP/portfolio/pull/18",
+        "workflowRun": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31058400058"
       },
-      "updatedAt": "2026-08-05T23:23:34.000Z"
+      "updatedAt": "2026-08-06T00:02:49.000Z"
     }
   ],
   "apps": [],
@@ -71,30 +71,30 @@
       "status": "active",
       "archived": false,
       "approvalSource": "registry",
-      "updatedAt": "2026-08-05T23:23:34.000Z"
+      "updatedAt": "2026-08-06T00:02:49.000Z"
     }
   ],
   "activity": [
     {
       "type": "ci",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "EngineeringOS discovery quality: success",
-      "occurredAt": "2026-08-05T23:23:53.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31056205331"
-    },
-    {
-      "type": "commit",
-      "repository": "JuanCarlosBP/portfolio",
-      "title": "[P01][W01D05] Política de decisiones técnicas",
-      "occurredAt": "2026-08-05T23:23:34.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/commit/6e6657833043638a823f8677eca32107cd5512c6"
+      "title": "EngineeringOS discovery quality: running",
+      "occurredAt": "2026-08-06T00:02:52.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/actions/runs/31058400058"
     },
     {
       "type": "pull_request",
       "repository": "JuanCarlosBP/portfolio",
-      "title": "[P01][W01D05] Política de decisiones técnicas",
-      "occurredAt": "2026-08-05T23:23:34.000Z",
-      "url": "https://github.com/JuanCarlosBP/portfolio/pull/17"
+      "title": "[P01][W01D05] Reconciliar cierre post-merge",
+      "occurredAt": "2026-08-06T00:02:50.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/pull/18"
+    },
+    {
+      "type": "commit",
+      "repository": "JuanCarlosBP/portfolio",
+      "title": "[P01][W01D05] Reconciliar cierre post-merge",
+      "occurredAt": "2026-08-06T00:02:49.000Z",
+      "url": "https://github.com/JuanCarlosBP/portfolio/commit/6c56edb2d77f9198534fe6068c6e38996438fa8e"
     }
   ],
   "degraded": false,
